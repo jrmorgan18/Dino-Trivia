@@ -276,17 +276,19 @@ function onStartClick() {
     return;
   }
 
-  const level = levelData[state.levelIndex];
-  if (state.questionIndex === 0 && !state.shuffled.length) {
-    startLevel(level);
-    return;
+  const levelFinished = state.questionIndex >= state.shuffled.length;
+
+  if (levelFinished) {
+    const hasNextLevel = state.levelIndex < levelData.length - 1;
+    if (hasNextLevel) {
+      prepareLevel(state.levelIndex + 1);
+    } else {
+      restartSession();
+      return;
+    }
   }
 
-  if (state.levelIndex < levelData.length - 1 && state.questionIndex >= state.shuffled.length) {
-    // move to next level
-    prepareLevel(state.levelIndex + 1);
-    startLevel(levelData[state.levelIndex]);
-  }
+  startLevel(levelData[state.levelIndex]);
 }
 
 function prepareLevel(index) {
