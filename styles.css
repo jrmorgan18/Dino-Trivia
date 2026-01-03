@@ -173,11 +173,14 @@ body {
   color: #118ab2;
   margin: 0.5rem 0;
   font-weight: 700;
+  text-shadow: 0 1px 8px rgba(0, 0, 0, 0.45);
 }
 
 .question h3 {
   margin: 0 0 0.75rem;
-  font-size: 1.4rem;
+  font-size: 1.45rem;
+  color: #eff7ff;
+  text-shadow: 0 1px 10px rgba(0, 0, 0, 0.5);
 }
 
 .choices {
@@ -422,6 +425,11 @@ body {
   0% { transform: translateY(0); }
   50% { transform: translateY(-8px); }
   100% { transform: translateY(0); }
+}
+
+@keyframes float {
+  0% { transform: translateY(0) scale(1); }
+  100% { transform: translateY(-8px) scale(1.01); }
 }
 
 @keyframes glide {
