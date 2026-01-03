@@ -89,8 +89,8 @@ const levelData = [
     ]
   },
   {
-    name: 'Crested Cliffs (Level 2)',
-    description: 'Step into 1st and 2nd grade challenges with more detail.',
+    name: 'Stegosaurus Steps (Level 2)',
+    description: 'Step into 1st and 2nd grade challenges with stego-strength detail.',
     badge: 'Getting Tougher',
     difficulty: 'Medium',
     theme: 'forest',
@@ -178,8 +178,8 @@ const levelData = [
     ]
   },
   {
-    name: 'Stegosaurus Steps (Level 3)',
-    description: 'Stronger 2nd and 3rd grade thinking, using multi-step clues.',
+    name: 'T-Rex Ridge (Level 3)',
+    description: 'Stronger 2nd and 3rd grade thinking with T-Rex sized steps.',
     badge: 'Brainy Beast',
     difficulty: 'Hard',
     theme: 'sunset',
@@ -267,8 +267,8 @@ const levelData = [
     ]
   },
   {
-    name: 'T-Rex Ridge (Level 4)',
-    description: 'Challenge round with 3rd grade depth and quick thinking.',
+    name: 'Indominus Invasion (Level 4)',
+    description: 'Challenge round with 3rd grade depth and quick thinking for daring explorers.',
     badge: 'Dino Master',
     difficulty: 'Challenge',
     theme: 'lava',
@@ -372,6 +372,24 @@ const categoryColors = {
   Patterns: 'dot--patterns'
 };
 
+const fossilBuckets = {
+  stegosaurus: {
+    levelIndex: 1,
+    title: 'Stegosaurus Steps',
+    label: 'Level 2'
+  },
+  trex: {
+    levelIndex: 2,
+    title: 'T-Rex Ridge',
+    label: 'Level 3'
+  },
+  indominus: {
+    levelIndex: 3,
+    title: 'Indominus Invasion',
+    label: 'Level 4'
+  }
+};
+
 const state = {
   levelIndex: 0,
   questionIndex: 0,
@@ -384,7 +402,12 @@ const state = {
   levelWrong: {},
   activeCategory: 'all',
   mode: 'level',
-  canAdvance: true
+  canAdvance: true,
+  fossils: {
+    stegosaurus: 0,
+    trex: 0,
+    indominus: 0
+  }
 };
 
 const ui = {
@@ -407,7 +430,17 @@ const ui = {
   levelSelect: document.getElementById('level-select'),
   categorySelect: document.getElementById('category-select'),
   logTemplate: document.getElementById('log-item-template'),
-  badgeTemplate: document.getElementById('badge-template')
+  badgeTemplate: document.getElementById('badge-template'),
+  fossilRows: {
+    stegosaurus: document.getElementById('fossils-stegosaurus'),
+    trex: document.getElementById('fossils-trex'),
+    indominus: document.getElementById('fossils-indominus')
+  },
+  fossilCounts: {
+    stegosaurus: document.getElementById('fossil-count-stegosaurus'),
+    trex: document.getElementById('fossil-count-trex'),
+    indominus: document.getElementById('fossil-count-indominus')
+  }
 };
 
 function getRunKey() {
@@ -611,10 +644,14 @@ function handleAnswer(choiceIndex) {
   choiceButtons.forEach(btn => (btn.disabled = true));
 
   const isCorrect = choiceIndex === current.answer;
+  const dinoKey = getDinoKeyForLevelIndex(state.levelIndex);
   const runKey = getRunKey();
   if (isCorrect) {
     state.sessionScore += 10;
     state.levelCorrect[runKey] = (state.levelCorrect[runKey] || 0) + 1;
+    if (dinoKey) {
+      addFossil(dinoKey);
+    }
   } else {
     state.levelWrong[runKey] = (state.levelWrong[runKey] || 0) + 1;
   }
@@ -622,15 +659,16 @@ function handleAnswer(choiceIndex) {
   choiceButtons[choiceIndex].classList.add(isCorrect ? 'correct' : 'incorrect');
   choiceButtons[current.answer].classList.add('correct');
 
+  const fossilNote = isCorrect && dinoKey ? ` +1 ${formatDinoName(dinoKey)} fossil!` : '';
   ui.feedback.textContent = isCorrect
-    ? `🦕 Correct! ${current.fact}`
+    ? `🦕 Correct! ${current.fact}${fossilNote ? ` ${fossilNote}` : ''}`
     : `🦖 Not quite. ${current.fact}`;
 
   const levelLabel = getCurrentMeta().name;
   addLogEntry({
     label: `${levelLabel}`,
     detail: `${current.category} • ${current.grade}`,
-    text: `${current.prompt} → ${isCorrect ? 'Correct' : 'Try again next time'}`
+    text: `${current.prompt} → ${isCorrect ? 'Correct' : 'Try again next time'}${fossilNote ? ` (${fossilNote.trim()})` : ''}`
   });
 
   updateScoreboards();
@@ -731,18 +769,21 @@ function loadCumulative() {
   const stored = JSON.parse(localStorage.getItem('dinoTriviaStats') || '{}');
   state.cumulativeScore = stored.cumulativeScore || 0;
   state.sessionsPlayed = stored.sessionsPlayed || 0;
+  state.fossils = { ...blankFossilState(), ...(stored.fossils || {}) };
 }
 
 function saveCumulative() {
   localStorage.setItem('dinoTriviaStats', JSON.stringify({
     cumulativeScore: state.cumulativeScore,
-    sessionsPlayed: state.sessionsPlayed
+    sessionsPlayed: state.sessionsPlayed,
+    fossils: state.fossils
   }));
 }
 
 function resetCumulative() {
   state.cumulativeScore = 0;
   state.sessionsPlayed = 0;
+  state.fossils = blankFossilState();
   saveCumulative();
   updateScoreboards();
   logMessage('Cumulative fossils reset. Fresh tracks ahead!');
@@ -752,12 +793,68 @@ function updateScoreboards() {
   ui.sessionScore.textContent = state.sessionScore;
   ui.cumulativeScore.textContent = state.cumulativeScore;
   ui.sessionsPlayed.textContent = `Sessions played: ${state.sessionsPlayed}`;
+  renderFossilBuckets();
 }
 
 function updateProgress(completedCount = state.questionIndex) {
   const total = state.shuffled.length || 1;
   const percent = Math.round((completedCount / total) * 100);
   ui.progressBar.style.width = `${percent}%`;
+}
+
+function blankFossilState() {
+  return {
+    stegosaurus: 0,
+    trex: 0,
+    indominus: 0
+  };
+}
+
+function getDinoKeyForLevelIndex(index) {
+  return Object.entries(fossilBuckets).find(([, details]) => details.levelIndex === index)?.[0] || null;
+}
+
+function formatDinoName(key) {
+  return fossilBuckets[key]?.title || 'dinosaur';
+}
+
+function addFossil(dinoKey) {
+  if (!dinoKey) return;
+  state.fossils[dinoKey] = (state.fossils[dinoKey] || 0) + 1;
+  renderFossilBuckets();
+  saveCumulative();
+}
+
+function renderFossilBuckets() {
+  Object.entries(fossilBuckets).forEach(([key]) => {
+    const count = state.fossils[key] || 0;
+    const row = ui.fossilRows[key];
+    const countLabel = ui.fossilCounts[key];
+    if (!row || !countLabel) return;
+
+    row.innerHTML = '';
+    if (!count) {
+      const placeholder = document.createElement('span');
+      placeholder.className = 'fossil-placeholder';
+      placeholder.textContent = 'No fossils yet';
+      row.appendChild(placeholder);
+    } else {
+      const iconsToShow = Math.min(count, 12);
+      for (let i = 0; i < iconsToShow; i += 1) {
+        const token = document.createElement('span');
+        token.className = 'fossil-token';
+        token.textContent = '🦴';
+        row.appendChild(token);
+      }
+      if (count > iconsToShow) {
+        const extra = document.createElement('span');
+        extra.className = 'fossil-plus';
+        extra.textContent = `+${count - iconsToShow}`;
+        row.appendChild(extra);
+      }
+    }
+    countLabel.textContent = `${count} ${count === 1 ? 'fossil' : 'fossils'}`;
+  });
 }
 
 function addLogEntry({ label, detail, text }) {

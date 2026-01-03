@@ -18,12 +18,6 @@
     <div class="pterodactyl"></div>
   </div>
 
-  <div class="dino-photo-strip" aria-hidden="true">
-    <div class="dino-photo dino-photo--rex"></div>
-    <div class="dino-photo dino-photo--spino"></div>
-    <div class="dino-photo dino-photo--indominus"></div>
-  </div>
-
   <header class="hero">
     <div class="hero__text">
       <p class="hero__eyebrow">STOMP INTO LEARNING</p>
@@ -42,6 +36,60 @@
       </div>
     </div>
   </header>
+
+  <section class="fossil-board" aria-labelledby="fossil-title">
+    <div class="fossil-board__header">
+      <p class="label">Collect fossils</p>
+      <div>
+        <h3 id="fossil-title">Fill the dino buckets</h3>
+        <p class="muted">Earn a fossil for each correct answer on the matching dinosaur level.</p>
+      </div>
+    </div>
+    <div class="fossil-grid">
+      <article class="fossil-card" data-dino="stegosaurus">
+        <div class="fossil-card__image">
+          <img src="images/dino-stego.svg" alt="Stegosaurus bucket" loading="lazy">
+        </div>
+        <div class="fossil-card__body">
+          <div>
+            <p class="label">Level 2</p>
+            <h4>Stegosaurus Steps</h4>
+            <p class="muted">Stack sturdy plates with every correct answer.</p>
+          </div>
+          <p class="fossil-card__count" id="fossil-count-stegosaurus">0 fossils</p>
+          <div class="fossil-card__tray" id="fossils-stegosaurus" aria-live="polite"></div>
+        </div>
+      </article>
+      <article class="fossil-card" data-dino="trex">
+        <div class="fossil-card__image">
+          <img src="images/t-rex2.png" alt="T-Rex bucket" loading="lazy">
+        </div>
+        <div class="fossil-card__body">
+          <div>
+            <p class="label">Level 3</p>
+            <h4>T-Rex Ridge</h4>
+            <p class="muted">Feed the king of the ridge with each roar-some answer.</p>
+          </div>
+          <p class="fossil-card__count" id="fossil-count-trex">0 fossils</p>
+          <div class="fossil-card__tray" id="fossils-trex" aria-live="polite"></div>
+        </div>
+      </article>
+      <article class="fossil-card" data-dino="indominus">
+        <div class="fossil-card__image">
+          <img src="images/indominus.png" alt="Indominus Rex bucket" loading="lazy">
+        </div>
+        <div class="fossil-card__body">
+          <div>
+            <p class="label">Level 4</p>
+            <h4>Indominus Invasion</h4>
+            <p class="muted">Keep the hybrid happy by uncovering fossils.</p>
+          </div>
+          <p class="fossil-card__count" id="fossil-count-indominus">0 fossils</p>
+          <div class="fossil-card__tray" id="fossils-indominus" aria-live="polite"></div>
+        </div>
+      </article>
+    </div>
+  </section>
 
   <main class="layout">
     <section class="panel panel--level" id="level-panel">
