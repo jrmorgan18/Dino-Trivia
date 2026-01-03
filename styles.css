@@ -437,13 +437,22 @@ body {
   opacity: 0.8;
 }
 
+.dino-photo-strip {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: -1;
+}
+
 .dino-photo {
   position: absolute;
-  width: 320px;
-  height: 200px;
+  bottom: 18px;
+  width: 340px;
+  height: 220px;
   border-radius: 16px;
-  background-size: cover;
-  background-position: center;
+  background-size: contain;
+  background-position: center bottom;
+  background-repeat: no-repeat;
   border: 1px solid rgba(255, 255, 255, 0.18);
   box-shadow: 0 18px 34px rgba(0, 0, 0, 0.4);
   filter: saturate(1.2) brightness(1.05);
@@ -453,27 +462,24 @@ body {
 }
 
 .dino-photo--rex {
-  right: 6%;
-  top: 8%;
-  background-image: url('images/dino-rex.svg');
+  left: 4%;
+  width: 360px;
+  height: 230px;
+  background-image: url('images/t-rex2.png');
 }
 
 .dino-photo--spino {
-  left: 5%;
-  top: 14%;
-  background-image: url('images/dino-spino.svg');
+  left: 34%;
+  width: 380px;
+  height: 240px;
+  background-image: url('images/spino.png');
 }
 
-.dino-photo--stego {
-  right: 18%;
-  top: 26%;
-  background-image: url('images/dino-stego.svg');
-}
-
-.dino-photo--park {
-  left: 22%;
-  top: 6%;
-  background-image: url('images/dino-park.svg');
+.dino-photo--indominus {
+  right: 6%;
+  width: 360px;
+  height: 240px;
+  background-image: url('images/indominus.png');
 }
 
 @keyframes stomp {
