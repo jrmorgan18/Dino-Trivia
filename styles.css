@@ -196,39 +196,24 @@ body {
   border-radius: 16px;
   border: var(--border);
   cursor: pointer;
-  background: linear-gradient(135deg, rgba(16, 48, 79, 0.9), rgba(15, 36, 58, 0.9));
-  color: #eaf6ff;
-  font-weight: 700;
-  letter-spacing: 0.1px;
-  text-shadow: 0 1px 8px rgba(0, 0, 0, 0.5);
-  transition: transform 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease, background 0.15s ease, color 0.15s ease, outline 0.15s ease;
+  background: rgba(255, 255, 255, 0.04);
+  transition: transform 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease, background 0.15s ease;
 }
 
 .choice:hover {
   transform: translateY(-2px);
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
-  background: linear-gradient(135deg, rgba(25, 79, 125, 0.95), rgba(21, 61, 94, 0.95));
+  box-shadow: 0 10px 26px rgba(0, 0, 0, 0.24);
+  background: rgba(255, 255, 255, 0.07);
 }
 
 .choice.correct {
   border-color: #22d3ee;
-  background: linear-gradient(135deg, rgba(34, 211, 238, 0.2), rgba(19, 129, 180, 0.4));
+  background: rgba(34, 211, 238, 0.12);
 }
 
 .choice.incorrect {
   border-color: #f97316;
-  background: linear-gradient(135deg, rgba(249, 115, 22, 0.18), rgba(19, 34, 52, 0.9));
-}
-
-.choice:focus-visible {
-  outline: 2px solid #22d3ee;
-  outline-offset: 4px;
-  box-shadow: 0 0 0 6px rgba(34, 211, 238, 0.2);
-}
-
-.choice .dot {
-  border: 1px solid rgba(255, 255, 255, 0.35);
-  box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.04);
+  background: rgba(249, 115, 22, 0.1);
 }
 
 .controls {
@@ -359,17 +344,11 @@ body {
 .selector select {
   padding: 0.55rem 0.75rem;
   border-radius: 12px;
-  border: 1px solid rgba(255, 255, 255, 0.28);
-  background: rgba(19, 43, 72, 0.9);
-  color: #eaf6ff;
-  font-weight: 800;
-  letter-spacing: 0.5px;
-  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.3);
-}
-
-.selector select option {
-  background: #0b1a2c;
-  color: #eaf6ff;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  background: rgba(255, 255, 255, 0.04);
+  color: var(--text);
+  font-weight: 700;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.18);
 }
 
 .panel--level .question__category::before {
@@ -426,42 +405,6 @@ body {
   animation-delay: 6s;
   mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 220 120'%3E%3Cpath fill='%23000' d='M14 88c4-8 12-15 24-18l22-6 12-8c9-7 20-10 32-11 12-1 22-5 32-8 14-4 30 0 42 8 10 7 14 18 11 23-4 6-18 5-26 9-10 6-12 17-22 22-9 4-22 0-34 3l-29 6c-10 2-22 0-30-6l-23-16c-7-5-17-6-21-13-2-4-1-9 2-13Z'/%3E%3Cpath fill='%23000' d='M86 52c-7 0-15-6-14-12 0-6 7-10 14-10 7 1 13 6 12 12-1 6-6 10-12 10Z'/%3E%3C/svg%3E");
   -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 220 120'%3E%3Cpath fill='%23000' d='M14 88c4-8 12-15 24-18l22-6 12-8c9-7 20-10 32-11 12-1 22-5 32-8 14-4 30 0 42 8 10 7 14 18 11 23-4 6-18 5-26 9-10 6-12 17-22 22-9 4-22 0-34 3l-29 6c-10 2-22 0-30-6l-23-16c-7-5-17-6-21-13-2-4-1-9 2-13Z'/%3E%3Cpath fill='%23000' d='M86 52c-7 0-15-6-14-12 0-6 7-10 14-10 7 1 13 6 12 12-1 6-6 10-12 10Z'/%3E%3C/svg%3E");
-}
-
-.dino-photo {
-  position: absolute;
-  inset: auto 8% 6% auto;
-  width: min(420px, 36vw);
-  height: 260px;
-  background-size: cover;
-  background-position: center;
-  border-radius: 22px;
-  filter: drop-shadow(0 20px 42px rgba(0, 0, 0, 0.55));
-  opacity: 0.85;
-  animation: float 12s ease-in-out infinite alternate;
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  overflow: hidden;
-}
-
-.dino-photo::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: radial-gradient(circle at 20% 20%, rgba(34, 211, 238, 0.12), transparent 55%), linear-gradient(180deg, rgba(5, 12, 24, 0.1), rgba(5, 12, 24, 0.6));
-}
-
-.dino-photo--rex {
-  right: 4%;
-  background-image: url('https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=1200&q=80');
-}
-
-.dino-photo--raptor {
-  left: 6%;
-  bottom: 16%;
-  width: min(360px, 32vw);
-  height: 210px;
-  animation-delay: 2.5s;
-  background-image: url('https://images.unsplash.com/photo-1627587085423-63ac64f005c2?auto=format&fit=crop&w=1100&q=80');
 }
 
 .pterodactyl {
