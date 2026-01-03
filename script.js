@@ -45,6 +45,46 @@ const levelData = [
         choices: ['🦖', '🌋', '🌴', '🪨'],
         answer: 0,
         fact: 'The pattern alternates volcano, dino, volcano, dino.'
+      },
+      {
+        category: 'Geography',
+        grade: '1',
+        prompt: 'Which direction is opposite of north on a compass?',
+        choices: ['East', 'South', 'West', 'Up'],
+        answer: 1,
+        fact: 'South is the opposite direction from north on a compass rose.'
+      },
+      {
+        category: 'Science',
+        grade: 'K-1',
+        prompt: 'Dinosaurs like Triceratops that ate plants are called what?',
+        choices: ['Herbivores', 'Carnivores', 'Omnivores', 'Minerals'],
+        answer: 0,
+        fact: 'Herbivores eat plants, leaves, and fruit.'
+      },
+      {
+        category: 'Music',
+        grade: '1',
+        prompt: 'Which instrument do you strum with strings?',
+        choices: ['Drum', 'Guitar', 'Flute', 'Triangle'],
+        answer: 1,
+        fact: 'A guitar makes sound when you strum or pluck its strings.'
+      },
+      {
+        category: 'U.S. History',
+        grade: '1',
+        prompt: 'What colors are on the United States flag?',
+        choices: ['Red, white, and blue', 'Green and white', 'Blue and yellow', 'Orange and purple'],
+        answer: 0,
+        fact: 'The U.S. flag uses red, white, and blue to represent courage, purity, and justice.'
+      },
+      {
+        category: 'Geometry',
+        grade: '1',
+        prompt: 'How many corners does a rectangle have?',
+        choices: ['2', '3', '4', '6'],
+        answer: 2,
+        fact: 'Rectangles always have four corners, also called vertices.'
       }
     ]
   },
@@ -94,6 +134,46 @@ const levelData = [
         choices: ['Freezing', 'Melting', 'Evaporation', 'Erosion'],
         answer: 2,
         fact: 'Evaporation happens when heat makes water molecules move into the air.'
+      },
+      {
+        category: 'Geometry',
+        grade: '2',
+        prompt: 'A shape with four equal sides and four right angles is called a what?',
+        choices: ['Rectangle', 'Square', 'Triangle', 'Pentagon'],
+        answer: 1,
+        fact: 'Squares have four equal sides and four right angles.'
+      },
+      {
+        category: 'Science',
+        grade: '2',
+        prompt: 'What do we call young frogs that still have tails?',
+        choices: ['Hatchlings', 'Tadpoles', 'Calves', 'Chicks'],
+        answer: 1,
+        fact: 'Tadpoles hatch in water and later grow legs to become frogs.'
+      },
+      {
+        category: 'Sports (Baseball)',
+        grade: '2',
+        prompt: 'In baseball, how many bases must a player touch to score a run?',
+        choices: ['2', '3', '4', '5'],
+        answer: 2,
+        fact: 'A player has to touch first, second, third, and home plate—four bases total.'
+      },
+      {
+        category: 'Patterns',
+        grade: '1-2',
+        prompt: 'What comes next? 2, 4, 6, 8, __',
+        choices: ['9', '10', '12', '14'],
+        answer: 1,
+        fact: 'The pattern adds 2 each time: 8 + 2 = 10.'
+      },
+      {
+        category: 'Geography',
+        grade: '2',
+        prompt: 'Which landform is a tall, pointed piece of rock rising up from the ground?',
+        choices: ['Valley', 'Mountain', 'River', 'Lake'],
+        answer: 1,
+        fact: 'Mountains rise high above the land around them.'
       }
     ]
   },
@@ -143,6 +223,46 @@ const levelData = [
         choices: ['11', '12', '15', '18'],
         answer: 2,
         fact: 'The pattern adds 5 each time: 10 + 5 = 15.'
+      },
+      {
+        category: 'Science',
+        grade: '3',
+        prompt: 'Earth travels around the sun once each year. What is this path called?',
+        choices: ['Spin', 'Orbit', 'Loop', 'Slide'],
+        answer: 1,
+        fact: 'An orbit is the curved path something takes around another object in space.'
+      },
+      {
+        category: 'U.S. History',
+        grade: '3',
+        prompt: 'Which civil rights leader shared the “I Have a Dream” speech in 1963?',
+        choices: ['George Washington', 'Martin Luther King Jr.', 'Susan B. Anthony', 'Neil Armstrong'],
+        answer: 1,
+        fact: 'Dr. Martin Luther King Jr. spoke about equality during the March on Washington.'
+      },
+      {
+        category: 'Geography',
+        grade: '3',
+        prompt: 'The imaginary line around Earth at 0° latitude is called what?',
+        choices: ['Prime Meridian', 'Equator', 'Tropic of Cancer', 'International Date Line'],
+        answer: 1,
+        fact: 'The equator circles the middle of Earth and divides the Northern and Southern Hemispheres.'
+      },
+      {
+        category: 'Geometry',
+        grade: '3',
+        prompt: 'A triangle with all sides the same length is called what?',
+        choices: ['Right triangle', 'Scalene triangle', 'Equilateral triangle', 'Isosceles triangle'],
+        answer: 2,
+        fact: 'Equilateral triangles have three equal sides and equal angles.'
+      },
+      {
+        category: 'Music',
+        grade: '2-3',
+        prompt: 'In music, which term means to play softly?',
+        choices: ['Forte', 'Piano', 'Allegro', 'Staccato'],
+        answer: 1,
+        fact: 'Piano (marked with a “p”) tells musicians to play quietly.'
       }
     ]
   },
@@ -200,6 +320,38 @@ const levelData = [
         choices: ['Add 1, then 2, repeat', 'Add 2, then add 3, repeat', 'Add 3 every time', 'Multiply by 2 each time'],
         answer: 1,
         fact: 'The pattern adds 2, then 3, repeating to make growing steps.'
+      },
+      {
+        category: 'Science',
+        grade: '3',
+        prompt: 'Rocks melted deep underground become liquid called what?',
+        choices: ['Frost', 'Magma', 'Steam', 'Ice'],
+        answer: 1,
+        fact: 'Magma is melted rock inside Earth; when it erupts outside, it is called lava.'
+      },
+      {
+        category: 'U.S. History',
+        grade: '3',
+        prompt: 'Which document begins with “We the People”?',
+        choices: ['The Declaration of Independence', 'The U.S. Constitution', 'The Emancipation Proclamation', 'The Bill of Rights'],
+        answer: 1,
+        fact: 'The preamble to the U.S. Constitution starts with “We the People.”'
+      },
+      {
+        category: 'Science',
+        grade: '3',
+        prompt: 'What do we call animals that hunt other animals for food?',
+        choices: ['Herbivores', 'Producers', 'Predators', 'Seedlings'],
+        answer: 2,
+        fact: 'Predators hunt other animals, while prey are the animals they hunt.'
+      },
+      {
+        category: 'Sports (Football)',
+        grade: '3',
+        prompt: 'How many points is a touchdown worth in football?',
+        choices: ['3', '6', '7', '10'],
+        answer: 1,
+        fact: 'A touchdown adds six points before any extra kicks or conversions.'
       }
     ]
   }
@@ -228,7 +380,11 @@ const state = {
   sessionComplete: false,
   cumulativeScore: 0,
   sessionsPlayed: 0,
-  levelCorrect: {}
+  levelCorrect: {},
+  levelWrong: {},
+  activeCategory: 'all',
+  mode: 'level',
+  canAdvance: true
 };
 
 const ui = {
@@ -248,11 +404,80 @@ const ui = {
   sessionsPlayed: document.getElementById('sessions-played'),
   log: document.getElementById('log'),
   resetCumulative: document.getElementById('reset-cumulative'),
+  levelSelect: document.getElementById('level-select'),
+  categorySelect: document.getElementById('category-select'),
   logTemplate: document.getElementById('log-item-template'),
   badgeTemplate: document.getElementById('badge-template')
 };
 
+function getRunKey() {
+  return state.mode === 'category' ? `category:${state.activeCategory}` : state.levelIndex;
+}
+
+function getCurrentMeta() {
+  if (state.mode === 'category') {
+    return {
+      name: `Category Run: ${state.activeCategory}`,
+      description: 'Stay in one research bay and tackle only this category.',
+      badge: 'Focused Dig',
+      difficulty: 'Mixed',
+      theme: 'steel'
+    };
+  }
+  return levelData[state.levelIndex];
+}
+
+function populateSelectors() {
+  ui.levelSelect.innerHTML = '';
+  levelData.forEach((level, idx) => {
+    const option = document.createElement('option');
+    option.value = idx;
+    option.textContent = `${level.name}`;
+    ui.levelSelect.appendChild(option);
+  });
+
+  const categories = new Set();
+  levelData.forEach(level =>
+    level.questions.forEach(q => categories.add(q.category))
+  );
+  Array.from(categories)
+    .sort()
+    .forEach(category => {
+      const option = document.createElement('option');
+      option.value = category;
+      option.textContent = category;
+      ui.categorySelect.appendChild(option);
+    });
+
+  ui.levelSelect.value = '0';
+  ui.categorySelect.value = 'all';
+}
+
+function prepareCategory(category) {
+  state.mode = 'category';
+  state.activeCategory = category;
+  ui.categorySelect.value = category;
+  state.questionIndex = 0;
+  const pool = levelData.flatMap(level => level.questions.filter(q => q.category === category));
+  state.shuffled = shuffle([...pool]);
+  const runKey = getRunKey();
+  state.levelCorrect[runKey] = 0;
+  state.levelWrong[runKey] = 0;
+  state.canAdvance = false;
+  ui.progressBar.style.width = '0%';
+  renderLevelInfo();
+  ui.questionText.textContent = state.shuffled.length
+    ? `Press "Start Adventure" to begin this ${category} run.`
+    : `No questions available for ${category} yet.`;
+  ui.choices.innerHTML = '';
+  ui.feedback.textContent = '';
+  ui.nextBtn.disabled = true;
+  ui.summaryBtn.disabled = true;
+  ui.startBtn.textContent = `Start ${category}`;
+}
+
 function init() {
+  populateSelectors();
   loadCumulative();
   updateScoreboards();
   prepareLevel(0);
@@ -268,6 +493,21 @@ function bindEvents() {
   });
   ui.summaryBtn.addEventListener('click', () => showSummary());
   ui.resetCumulative.addEventListener('click', resetCumulative);
+  ui.levelSelect.addEventListener('change', () => {
+    state.mode = 'level';
+    state.activeCategory = 'all';
+    ui.categorySelect.value = 'all';
+    prepareLevel(Number(ui.levelSelect.value) || 0);
+  });
+  ui.categorySelect.addEventListener('change', (event) => {
+    const chosen = event.target.value;
+    if (chosen === 'all') {
+      state.mode = 'level';
+      prepareLevel(Number(ui.levelSelect.value) || 0);
+    } else {
+      prepareCategory(chosen);
+    }
+  });
 }
 
 function onStartClick() {
@@ -276,26 +516,43 @@ function onStartClick() {
     return;
   }
 
-  const levelFinished = state.questionIndex >= state.shuffled.length;
+  const selectedCategory = ui.categorySelect.value;
+  const selectedLevel = Number(ui.levelSelect.value) || 0;
+  const levelFinished = state.questionIndex >= state.shuffled.length && state.shuffled.length > 0;
+
+  if (selectedCategory !== 'all') {
+    prepareCategory(selectedCategory);
+    startLevel();
+    return;
+  }
 
   if (levelFinished) {
     const hasNextLevel = state.levelIndex < levelData.length - 1;
-    if (hasNextLevel) {
-      prepareLevel(state.levelIndex + 1);
+    if (hasNextLevel && state.mode === 'level' && state.canAdvance) {
+      const nextIndex = state.levelIndex + 1;
+      prepareLevel(nextIndex);
+      ui.levelSelect.value = String(nextIndex);
     } else {
-      restartSession();
-      return;
+      prepareLevel(selectedLevel);
     }
+  } else if (state.mode !== 'level' || state.levelIndex !== selectedLevel) {
+    prepareLevel(selectedLevel);
   }
 
-  startLevel(levelData[state.levelIndex]);
+  startLevel();
 }
 
 function prepareLevel(index) {
+  state.mode = 'level';
+  state.activeCategory = 'all';
   state.levelIndex = index;
+  ui.levelSelect.value = String(index);
   state.questionIndex = 0;
   state.shuffled = shuffle([...levelData[index].questions]);
-  state.levelCorrect[index] = 0;
+  const runKey = getRunKey();
+  state.levelCorrect[runKey] = 0;
+  state.levelWrong[runKey] = 0;
+  state.canAdvance = true;
   ui.progressBar.style.width = '0%';
   renderLevelInfo();
   ui.questionText.textContent = 'Press "Start Adventure" to begin this level.';
@@ -307,7 +564,7 @@ function prepareLevel(index) {
 }
 
 function renderLevelInfo() {
-  const level = levelData[state.levelIndex];
+  const level = getCurrentMeta();
   ui.levelName.textContent = level.name;
   ui.levelDescription.textContent = level.description;
   ui.badgeRow.innerHTML = '';
@@ -316,14 +573,19 @@ function renderLevelInfo() {
   ui.badgeRow.appendChild(badge);
 }
 
-function startLevel(level) {
+function startLevel() {
+  const meta = getCurrentMeta();
+  if (!state.shuffled.length) {
+    ui.feedback.textContent = `No questions loaded for ${meta.name}. Pick another option.`;
+    return;
+  }
   ui.startBtn.disabled = true;
   ui.nextBtn.disabled = true;
   ui.summaryBtn.disabled = true;
-  renderQuestion(level);
+  renderQuestion();
 }
 
-function renderQuestion(level) {
+function renderQuestion() {
   const current = state.shuffled[state.questionIndex];
   if (!current) return;
 
@@ -349,9 +611,12 @@ function handleAnswer(choiceIndex) {
   choiceButtons.forEach(btn => (btn.disabled = true));
 
   const isCorrect = choiceIndex === current.answer;
+  const runKey = getRunKey();
   if (isCorrect) {
     state.sessionScore += 10;
-    state.levelCorrect[state.levelIndex] = (state.levelCorrect[state.levelIndex] || 0) + 1;
+    state.levelCorrect[runKey] = (state.levelCorrect[runKey] || 0) + 1;
+  } else {
+    state.levelWrong[runKey] = (state.levelWrong[runKey] || 0) + 1;
   }
 
   choiceButtons[choiceIndex].classList.add(isCorrect ? 'correct' : 'incorrect');
@@ -361,8 +626,9 @@ function handleAnswer(choiceIndex) {
     ? `🦕 Correct! ${current.fact}`
     : `🦖 Not quite. ${current.fact}`;
 
+  const levelLabel = getCurrentMeta().name;
   addLogEntry({
-    label: `${levelData[state.levelIndex].name}`,
+    label: `${levelLabel}`,
     detail: `${current.category} • ${current.grade}`,
     text: `${current.prompt} → ${isCorrect ? 'Correct' : 'Try again next time'}`
   });
@@ -381,31 +647,55 @@ function nextQuestion() {
   }
   ui.nextBtn.disabled = true;
   ui.summaryBtn.disabled = true;
-  renderQuestion(levelData[state.levelIndex]);
+  renderQuestion();
 }
 
 function finishLevel() {
   ui.nextBtn.disabled = true;
   ui.summaryBtn.disabled = false;
   ui.startBtn.disabled = false;
-  ui.startBtn.textContent = state.levelIndex < levelData.length - 1 ? 'Advance to Next Level' : 'Play Again';
-  ui.feedback.textContent = 'Level complete! Review the summary or advance.';
+  const runKey = getRunKey();
+  const meta = getCurrentMeta();
+  const correctCount = state.levelCorrect[runKey] || 0;
+  const wrongCount = state.levelWrong[runKey] || 0;
+  const total = state.shuffled.length || 1;
+  const canAdvanceLevel = wrongCount <= 3;
+  if (state.mode === 'level') {
+    state.canAdvance = canAdvanceLevel;
+  }
+
+  if (state.mode === 'category') {
+    ui.startBtn.textContent = `Replay ${state.activeCategory}`;
+  } else if (!canAdvanceLevel && state.levelIndex < levelData.length - 1) {
+    ui.startBtn.textContent = 'Replay Level';
+  } else if (state.levelIndex < levelData.length - 1) {
+    ui.startBtn.textContent = 'Advance to Next Level';
+  } else {
+    ui.startBtn.textContent = 'Play Again';
+  }
+
+  const advanceNote = state.mode === 'level' && !canAdvanceLevel && state.levelIndex < levelData.length - 1
+    ? ' You missed more than 3 questions, so replay to unlock the next ridge.'
+    : '';
+  ui.feedback.textContent = `Level complete! ${correctCount} right, ${wrongCount} missed out of ${total}.${advanceNote}`;
   updateProgress(state.shuffled.length);
 
-  if (state.levelIndex === levelData.length - 1 && !state.sessionComplete) {
+  if (state.mode === 'level' && state.levelIndex === levelData.length - 1 && !state.sessionComplete) {
     completeSession();
   }
 }
 
 function showSummary() {
-  const level = levelData[state.levelIndex];
-  const correctCount = state.levelCorrect[state.levelIndex] || 0;
-  const total = level.questions.length;
-  const message = `Finished ${level.name}! You answered ${correctCount} of ${total} questions correctly in this level.`;
+  const level = getCurrentMeta();
+  const runKey = getRunKey();
+  const correctCount = state.levelCorrect[runKey] || 0;
+  const wrongCount = state.levelWrong[runKey] || 0;
+  const total = state.shuffled.length || (level.questions?.length ?? 0);
+  const message = `Finished ${level.name}! ${correctCount} correct and ${wrongCount} missed out of ${total}. ${state.mode === 'level' && wrongCount > 3 ? 'Replay to advance.' : ''}`;
   ui.feedback.textContent = message;
   addLogEntry({
     label: `${level.name} summary`,
-    detail: `${level.difficulty} • ${level.questions.length} questions`,
+    detail: `${level.difficulty} • ${state.shuffled.length} questions`,
     text: message
   });
   ui.summaryBtn.disabled = true;
@@ -427,6 +717,11 @@ function restartSession() {
   state.sessionScore = 0;
   state.sessionComplete = false;
   state.levelCorrect = {};
+  state.levelWrong = {};
+  state.mode = 'level';
+  state.activeCategory = 'all';
+  ui.categorySelect.value = 'all';
+  ui.levelSelect.value = '0';
   prepareLevel(0);
   updateScoreboards();
   logMessage('New session started. Let\'s stomp into more trivia!');
@@ -460,8 +755,7 @@ function updateScoreboards() {
 }
 
 function updateProgress(completedCount = state.questionIndex) {
-  const level = levelData[state.levelIndex];
-  const total = level.questions.length || 1;
+  const total = state.shuffled.length || 1;
   const percent = Math.round((completedCount / total) * 100);
   ui.progressBar.style.width = `${percent}%`;
 }

@@ -16,6 +16,8 @@
     <div class="dino dino-two"></div>
     <div class="dino dino-three"></div>
     <div class="pterodactyl"></div>
+    <div class="dino-photo dino-photo--rex"></div>
+    <div class="dino-photo dino-photo--raptor"></div>
   </div>
 
   <header class="hero">
@@ -45,6 +47,18 @@
           <h2 id="level-name">Hatchling Hills (Level 1)</h2>
           <p class="muted" id="level-description">Warm up with gentle, Kindergarten-friendly questions.</p>
         </div>
+        <div class="selectors">
+          <label class="selector">
+            <span>Pick a level</span>
+            <select id="level-select"></select>
+          </label>
+          <label class="selector">
+            <span>Or focus on a category</span>
+            <select id="category-select">
+              <option value="all">All categories</option>
+            </select>
+          </label>
+        </div>
         <div class="badges" id="badge-row">
           <!-- badges injected here -->
         </div>
@@ -62,6 +76,7 @@
         <button class="btn" id="start-btn">Start Adventure</button>
         <button class="btn btn--ghost" id="next-btn" disabled>Next Question</button>
         <button class="btn btn--ghost" id="summary-btn" disabled>See Level Summary</button>
+        <p class="muted strikes">Miss more than 3 questions and you must replay the level.</p>
       </div>
     </section>
 
