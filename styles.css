@@ -76,6 +76,105 @@ body {
   line-height: 1.6;
 }
 
+.fossil-board {
+  margin: 0 clamp(1rem, 4vw, 4rem);
+  margin-bottom: 1rem;
+  background: rgba(11, 22, 40, 0.7);
+  border: var(--border);
+  border-radius: 20px;
+  padding: 1.25rem 1.5rem;
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(8px);
+}
+
+.fossil-board__header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.fossil-board h3 {
+  margin: 0;
+  font-size: 1.4rem;
+}
+
+.fossil-grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  margin-top: 1rem;
+}
+
+.fossil-card {
+  display: grid;
+  gap: 0.5rem;
+  grid-template-columns: 90px 1fr;
+  align-items: start;
+  padding: 0.75rem;
+  border-radius: 16px;
+  background: linear-gradient(135deg, rgba(34, 211, 238, 0.08), rgba(8, 47, 73, 0.3));
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.28);
+}
+
+.fossil-card__image {
+  background: rgba(4, 17, 31, 0.8);
+  border-radius: 12px;
+  padding: 0.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  display: grid;
+  place-items: center;
+}
+
+.fossil-card__image img {
+  width: 100%;
+  height: auto;
+  display: block;
+  filter: drop-shadow(0 6px 12px rgba(0, 0, 0, 0.4));
+}
+
+.fossil-card__body h4 {
+  margin: 0.15rem 0;
+}
+
+.fossil-card__count {
+  margin: 0.15rem 0;
+  font-weight: 800;
+  color: #b0d7ff;
+  letter-spacing: 0.2px;
+}
+
+.fossil-card__tray {
+  min-height: 22px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  align-items: center;
+}
+
+.fossil-token {
+  width: 24px;
+  height: 24px;
+  border-radius: 8px;
+  background: radial-gradient(circle at 30% 30%, #fefefe, #cddfeb);
+  color: #0f213a;
+  display: grid;
+  place-items: center;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
+  font-size: 0.85rem;
+}
+
+.fossil-placeholder {
+  color: var(--muted);
+}
+
+.fossil-plus {
+  font-weight: 800;
+  color: #22d3ee;
+}
+
 .hero__score {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -437,51 +536,6 @@ body {
   opacity: 0.8;
 }
 
-.dino-photo-strip {
-  position: fixed;
-  inset: 0;
-  pointer-events: none;
-  z-index: -1;
-}
-
-.dino-photo {
-  position: absolute;
-  bottom: 18px;
-  width: 340px;
-  height: 220px;
-  border-radius: 16px;
-  background-size: contain;
-  background-position: center bottom;
-  background-repeat: no-repeat;
-  border: 1px solid rgba(255, 255, 255, 0.18);
-  box-shadow: 0 18px 34px rgba(0, 0, 0, 0.4);
-  filter: saturate(1.2) brightness(1.05);
-  opacity: 0.85;
-  mix-blend-mode: screen;
-  animation: float 10s ease-in-out infinite alternate;
-}
-
-.dino-photo--rex {
-  left: 4%;
-  width: 360px;
-  height: 230px;
-  background-image: url('images/t-rex2.png');
-}
-
-.dino-photo--spino {
-  left: 34%;
-  width: 380px;
-  height: 240px;
-  background-image: url('images/spino.png');
-}
-
-.dino-photo--indominus {
-  right: 6%;
-  width: 360px;
-  height: 240px;
-  background-image: url('images/indominus.png');
-}
-
 @keyframes stomp {
   0% { transform: translateY(0); }
   50% { transform: translateY(-8px); }
@@ -508,4 +562,5 @@ body {
   .panel { padding: 1.1rem; }
   .btn { width: 100%; text-align: center; }
   .controls { flex-direction: column; }
+  .fossil-card { grid-template-columns: 1fr; }
 }
