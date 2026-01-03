@@ -5,8 +5,10 @@
   --lava: #f97316;
   --sand: #102540;
   --panel: #0b1628cc;
+  --panel-strong: #0f213a;
   --text: #e2f1ff;
   --muted: #9fb7c8;
+  --muted-strong: #cfe8ff;
   --shadow: 0 18px 50px rgba(0, 0, 0, 0.4);
   --border: 1px solid rgba(255, 255, 255, 0.12);
   --badge: linear-gradient(135deg, #0ea5e9, #22d3ee);
@@ -170,17 +172,17 @@ body {
 .question__category {
   text-transform: uppercase;
   letter-spacing: 1px;
-  color: #118ab2;
+  color: #6dd3ff;
   margin: 0.5rem 0;
   font-weight: 700;
-  text-shadow: 0 1px 8px rgba(0, 0, 0, 0.45);
+  text-shadow: 0 1px 8px rgba(0, 0, 0, 0.6);
 }
 
 .question h3 {
   margin: 0 0 0.75rem;
   font-size: 1.45rem;
-  color: #eff7ff;
-  text-shadow: 0 1px 10px rgba(0, 0, 0, 0.5);
+  color: #f4fbff;
+  text-shadow: 0 2px 14px rgba(0, 0, 0, 0.55);
 }
 
 .choices {
@@ -194,26 +196,30 @@ body {
   gap: 0.75rem;
   padding: 0.9rem 1rem;
   border-radius: 16px;
-  border: var(--border);
+  border: 1px solid rgba(255, 255, 255, 0.24);
   cursor: pointer;
-  background: rgba(255, 255, 255, 0.04);
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.08), rgba(34, 211, 238, 0.07));
   transition: transform 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease, background 0.15s ease;
+  color: #f8fbff;
+  text-shadow: 0 1px 10px rgba(0, 0, 0, 0.6);
+  font-weight: 700;
 }
 
 .choice:hover {
   transform: translateY(-2px);
-  box-shadow: 0 10px 26px rgba(0, 0, 0, 0.24);
-  background: rgba(255, 255, 255, 0.07);
+  box-shadow: 0 10px 26px rgba(0, 0, 0, 0.3);
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.16), rgba(34, 211, 238, 0.16));
 }
 
 .choice.correct {
-  border-color: #22d3ee;
-  background: rgba(34, 211, 238, 0.12);
+  border-color: #7be3ff;
+  background: linear-gradient(135deg, rgba(34, 211, 238, 0.18), rgba(255, 255, 255, 0.14));
+  color: #042133;
 }
 
 .choice.incorrect {
   border-color: #f97316;
-  background: rgba(249, 115, 22, 0.1);
+  background: linear-gradient(135deg, rgba(249, 115, 22, 0.16), rgba(255, 255, 255, 0.08));
 }
 
 .controls {
@@ -338,17 +344,28 @@ body {
   display: grid;
   gap: 0.35rem;
   font-weight: 700;
-  color: var(--muted);
+  color: var(--muted-strong);
 }
 
 .selector select {
   padding: 0.55rem 0.75rem;
   border-radius: 12px;
-  border: 1px solid rgba(255, 255, 255, 0.18);
-  background: rgba(255, 255, 255, 0.04);
-  color: var(--text);
-  font-weight: 700;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.18);
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.16), rgba(14, 165, 233, 0.14));
+  color: #021020;
+  font-weight: 800;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.22);
+  text-shadow: 0 1px 2px rgba(255, 255, 255, 0.6);
+}
+
+.selector select option {
+  background-color: var(--panel-strong);
+  color: #f4fbff;
+}
+
+.selector select:focus-visible {
+  outline: 2px solid #7be3ff;
+  outline-offset: 2px;
 }
 
 .panel--level .question__category::before {
@@ -419,6 +436,33 @@ body {
   filter: drop-shadow(0 8px 14px rgba(0, 0, 0, 0.4));
   animation: glide 18s linear infinite;
   opacity: 0.8;
+}
+
+.dino-photo {
+  position: absolute;
+  width: 320px;
+  height: 200px;
+  border-radius: 16px;
+  background-size: cover;
+  background-position: center;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: 0 18px 34px rgba(0, 0, 0, 0.4);
+  filter: saturate(1.2) brightness(1.05);
+  opacity: 0.85;
+  mix-blend-mode: screen;
+  animation: float 10s ease-in-out infinite alternate;
+}
+
+.dino-photo--rex {
+  right: 6%;
+  top: 8%;
+  background-image: url('https://images.unsplash.com/photo-1508182311256-e3f7d1d0ed1d?auto=format&fit=crop&w=1200&q=80');
+}
+
+.dino-photo--raptor {
+  left: 6%;
+  top: 16%;
+  background-image: url('https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=1200&q=80');
 }
 
 @keyframes stomp {
