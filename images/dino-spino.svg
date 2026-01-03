@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 720" role="img" aria-labelledby="title desc">
+  <title id="title">River Spinosaurus</title>
+  <desc id="desc">Illustrated silhouette of a spinosaurus charging through misty water.</desc>
+  <defs>
+    <linearGradient id="sky2" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#0b1b2d" />
+      <stop offset="60%" stop-color="#0f2e40" />
+      <stop offset="100%" stop-color="#0a1826" />
+    </linearGradient>
+    <linearGradient id="dino2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f97316" />
+      <stop offset="100%" stop-color="#fb923c" />
+    </linearGradient>
+    <linearGradient id="mist" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#22d3ee" stop-opacity="0.24" />
+      <stop offset="100%" stop-color="#0ea5e9" stop-opacity="0.32" />
+    </linearGradient>
+    <filter id="shadow2" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="16" stdDeviation="12" flood-color="#041018" flood-opacity="0.7" />
+    </filter>
+  </defs>
+  <rect width="1200" height="720" fill="url(#sky2)" />
+  <rect y="520" width="1200" height="200" fill="#0b1728" opacity="0.88" />
+  <rect y="490" width="1200" height="40" fill="url(#mist)" opacity="0.6" />
+  <g transform="translate(120,140) scale(4.1)" filter="url(#shadow2)">
+    <path fill="url(#dino2)" d="M12 84c6-11 14-18 28-23l26-10 16-10c10-6 20-9 32-8 10 1 18 8 30 8 11 0 25 7 33 15 7 7 9 17 4 21-5 4-17 4-24 9-7 5-10 15-18 17-10 2-22-7-32-4l-30 8c-9 2-17 1-24-3l-24-13c-8-4-14-4-18-9-3-4-1-9 1-12Z" />
+    <path fill="#0b172a" opacity="0.28" d="M78 44c-8 2-18-2-20-8-2-5 2-10 8-11 5-1 14 1 17 7 2 5 0 10-5 12Z" />
+  </g>
+  <text x="6%" y="90%" fill="#e2f1ff" font-family="'Baloo 2', 'Fredoka', system-ui" font-size="48" font-weight="700" letter-spacing="2">Spinosaurus Splash</text>
+  <text x="6%" y="95%" fill="#9fb7c8" font-family="'Baloo 2', 'Fredoka', system-ui" font-size="28" font-weight="600">Reliable local art, no external image calls needed.</text>
+</svg>
