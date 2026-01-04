@@ -1,3 +1,5 @@
+const QUESTIONS_PER_RUN = 10;
+
 const levelData = [
   {
     name: 'Hatchling Hills (Level 1)',
@@ -85,6 +87,86 @@ const levelData = [
         choices: ['2', '3', '4', '6'],
         answer: 2,
         fact: 'Rectangles always have four corners, also called vertices.'
+      },
+      {
+        category: 'Science',
+        grade: 'K',
+        prompt: 'Which body part do you use to smell a flower?',
+        choices: ['Nose', 'Knee', 'Hand', 'Ear'],
+        answer: 0,
+        fact: 'Your nose helps you smell because it senses scents in the air.'
+      },
+      {
+        category: 'Geography',
+        grade: '1',
+        prompt: 'Which direction does the sun rise from?',
+        choices: ['North', 'South', 'East', 'West'],
+        answer: 2,
+        fact: 'The sun appears in the east each morning and sets in the west.'
+      },
+      {
+        category: 'Patterns',
+        grade: 'K-1',
+        prompt: 'What comes next: 🎈 🎈 ⭐ 🎈 🎈 ⭐ ?',
+        choices: ['🎈', '⭐', '🎈 🎈', '🌙'],
+        answer: 0,
+        fact: 'The pattern repeats two balloons, then a star.'
+      },
+      {
+        category: 'Sports (Baseball)',
+        grade: '1',
+        prompt: 'What do baseball players wear on their hands to catch the ball?',
+        choices: ['Helmet', 'Glove', 'Cleats', 'Scarf'],
+        answer: 1,
+        fact: 'A baseball glove is padded to help players catch pitches and hits.'
+      },
+      {
+        category: 'Phonics',
+        grade: 'K',
+        prompt: 'Which letter ends the word "cat"?',
+        choices: ['C', 'A', 'T', 'P'],
+        answer: 2,
+        fact: 'Cat spells C-A-T, so T is the ending sound.'
+      },
+      {
+        category: 'Geometry',
+        grade: 'K',
+        prompt: 'How many corners does a circle have?',
+        choices: ['0', '2', '4', '6'],
+        answer: 0,
+        fact: 'Circles have no corners; they are perfectly round.'
+      },
+      {
+        category: 'Music',
+        grade: '1',
+        prompt: 'Which instrument do you blow air into to make sound?',
+        choices: ['Drum', 'Flute', 'Guitar', 'Violin'],
+        answer: 1,
+        fact: 'Flutes make sound when air moves across the mouthpiece.'
+      },
+      {
+        category: 'U.S. History',
+        grade: '1',
+        prompt: 'What is the national bird of the United States?',
+        choices: ['Bald Eagle', 'Cardinal', 'Robin', 'Sparrow'],
+        answer: 0,
+        fact: 'The bald eagle symbolizes strength and freedom.'
+      },
+      {
+        category: 'Science',
+        grade: 'K-1',
+        prompt: 'Which animal hatches from an egg?',
+        choices: ['Puppy', 'Kitten', 'Chicken', 'Foal'],
+        answer: 2,
+        fact: 'Chickens hatch from eggs, just like many reptiles and birds.'
+      },
+      {
+        category: 'Patterns',
+        grade: 'K-1',
+        prompt: 'How many days are in a weekend?',
+        choices: ['1', '2', '3', '5'],
+        answer: 1,
+        fact: 'Saturday and Sunday make two weekend days.'
       }
     ]
   },
@@ -174,6 +256,86 @@ const levelData = [
         choices: ['Valley', 'Mountain', 'River', 'Lake'],
         answer: 1,
         fact: 'Mountains rise high above the land around them.'
+      },
+      {
+        category: 'Science',
+        grade: '1',
+        prompt: 'Mixing red and blue paint makes which color?',
+        choices: ['Green', 'Purple', 'Orange', 'Pink'],
+        answer: 1,
+        fact: 'Red and blue combine to create purple.'
+      },
+      {
+        category: 'Geography',
+        grade: '2',
+        prompt: 'What is a map key also called?',
+        choices: ['Legend', 'Riddle', 'Story', 'Border'],
+        answer: 0,
+        fact: 'A legend explains the symbols and colors used on a map.'
+      },
+      {
+        category: 'Patterns',
+        grade: '1-2',
+        prompt: 'What comes next? 5, 10, 15, 20, __',
+        choices: ['21', '22', '25', '30'],
+        answer: 2,
+        fact: 'The pattern adds 5 each time: 20 + 5 = 25.'
+      },
+      {
+        category: 'Music',
+        grade: '2',
+        prompt: 'Which instrument keeps the beat with sticks?',
+        choices: ['Drum', 'Violin', 'Piano', 'Harp'],
+        answer: 0,
+        fact: 'Drummers often use sticks to tap rhythms.'
+      },
+      {
+        category: 'Sports (Football)',
+        grade: '2',
+        prompt: 'What safety gear do football players wear on their heads?',
+        choices: ['Crown', 'Helmet', 'Cap', 'Hood'],
+        answer: 1,
+        fact: 'Helmets protect players during tackles and falls.'
+      },
+      {
+        category: 'Geometry',
+        grade: '2',
+        prompt: 'What do we call the corner where two lines meet in a shape?',
+        choices: ['Edge', 'Vertex', 'Side', 'Center'],
+        answer: 1,
+        fact: 'A vertex (plural: vertices) is where two sides connect.'
+      },
+      {
+        category: 'U.S. History',
+        grade: '2',
+        prompt: 'Which document announced the American colonies were free from Britain?',
+        choices: ['Bill of Rights', 'Declaration of Independence', 'U.S. Constitution', 'Mayflower Compact'],
+        answer: 1,
+        fact: 'The Declaration of Independence was adopted on July 4, 1776.'
+      },
+      {
+        category: 'Science',
+        grade: '2',
+        prompt: 'Animals that eat both plants and meat are called what?',
+        choices: ['Carnivores', 'Herbivores', 'Omnivores', 'Detritivores'],
+        answer: 2,
+        fact: 'Omnivores like bears and raccoons can eat plants and other animals.'
+      },
+      {
+        category: 'Geography',
+        grade: '2',
+        prompt: 'A compass needle points mostly toward which direction?',
+        choices: ['South', 'North', 'East', 'West'],
+        answer: 1,
+        fact: 'Compasses align with Earth’s magnetic field, pointing north.'
+      },
+      {
+        category: 'Sports (Basketball)',
+        grade: '2',
+        prompt: 'From which line do players shoot a free throw?',
+        choices: ['Half-court line', 'Free-throw line', 'Three-point line', 'Sideline'],
+        answer: 1,
+        fact: 'Free throws are taken from the free-throw line after certain fouls.'
       }
     ]
   },
@@ -263,6 +425,86 @@ const levelData = [
         choices: ['Forte', 'Piano', 'Allegro', 'Staccato'],
         answer: 1,
         fact: 'Piano (marked with a “p”) tells musicians to play quietly.'
+      },
+      {
+        category: 'Science',
+        grade: '3',
+        prompt: 'When clouds release water as rain or snow, what is it called?',
+        choices: ['Condensation', 'Precipitation', 'Evaporation', 'Melting'],
+        answer: 1,
+        fact: 'Precipitation returns water to Earth as part of the water cycle.'
+      },
+      {
+        category: 'Geography',
+        grade: '3',
+        prompt: 'Lines of latitude run in which direction around Earth?',
+        choices: ['North to south', 'East to west', 'Diagonal', 'Straight up'],
+        answer: 1,
+        fact: 'Latitude lines circle Earth east-west and measure north or south of the equator.'
+      },
+      {
+        category: 'Patterns',
+        grade: '2-3',
+        prompt: 'What is the rule? 3, 6, 12, 24',
+        choices: ['Add 3 each time', 'Multiply by 2 each time', 'Add 6 then subtract 1', 'Multiply by 3 each time'],
+        answer: 1,
+        fact: 'Each number doubles, so the pattern multiplies by 2.'
+      },
+      {
+        category: 'Music',
+        grade: '3',
+        prompt: 'Which musical term means to play loudly?',
+        choices: ['Forte', 'Piano', 'Crescendo', 'Legato'],
+        answer: 0,
+        fact: 'Forte (marked with an “f”) directs musicians to play with strong volume.'
+      },
+      {
+        category: 'Geometry',
+        grade: '3',
+        prompt: 'A square has sides 5 units long. What is its perimeter?',
+        choices: ['10 units', '15 units', '20 units', '25 units'],
+        answer: 2,
+        fact: 'Perimeter adds all sides: 5 + 5 + 5 + 5 = 20 units.'
+      },
+      {
+        category: 'U.S. History',
+        grade: '3',
+        prompt: 'Who was the first person to walk on the moon in 1969?',
+        choices: ['Buzz Aldrin', 'Neil Armstrong', 'Yuri Gagarin', 'Sally Ride'],
+        answer: 1,
+        fact: 'Neil Armstrong stepped onto the moon during Apollo 11.'
+      },
+      {
+        category: 'Science',
+        grade: '2-3',
+        prompt: 'Which organ pumps blood through your body?',
+        choices: ['Lungs', 'Brain', 'Heart', 'Stomach'],
+        answer: 2,
+        fact: 'Your heart beats to move blood and oxygen to all parts of the body.'
+      },
+      {
+        category: 'Sports (Basketball)',
+        grade: '3',
+        prompt: 'Taking the ball away from someone while they dribble is called what?',
+        choices: ['Block', 'Steal', 'Serve', 'Strike'],
+        answer: 1,
+        fact: 'A steal happens when you legally take possession from another player.'
+      },
+      {
+        category: 'Geography',
+        grade: '3',
+        prompt: 'What describes most deserts?',
+        choices: ['Snowy and wet', 'Dry with little rain', 'Full of lakes', 'Covered in forests'],
+        answer: 1,
+        fact: 'Deserts receive very little rainfall, making them dry environments.'
+      },
+      {
+        category: 'Sports (Baseball)',
+        grade: '2-3',
+        prompt: 'After hitting the ball, which base do you run to first?',
+        choices: ['Home plate', 'Second base', 'Third base', 'First base'],
+        answer: 3,
+        fact: 'Base runners sprint to first base right after a hit.'
       }
     ]
   },
@@ -352,6 +594,86 @@ const levelData = [
         choices: ['3', '6', '7', '10'],
         answer: 1,
         fact: 'A touchdown adds six points before any extra kicks or conversions.'
+      },
+      {
+        category: 'Science',
+        grade: '3',
+        prompt: 'Plants use sunlight, water, and carbon dioxide to make food in what process?',
+        choices: ['Germination', 'Photosynthesis', 'Migration', 'Reflection'],
+        answer: 1,
+        fact: 'Photosynthesis creates sugar for the plant and releases oxygen.'
+      },
+      {
+        category: 'Geography',
+        grade: '3',
+        prompt: 'The Prime Meridian passes through which city?',
+        choices: ['Paris', 'Greenwich, London', 'New York City', 'Tokyo'],
+        answer: 1,
+        fact: 'Greenwich, London marks 0° longitude, the start of the Prime Meridian.'
+      },
+      {
+        category: 'U.S. History',
+        grade: '3',
+        prompt: 'Which document announced freedom for enslaved people in the Confederacy?',
+        choices: ['Emancipation Proclamation', 'Articles of Confederation', 'Federalist Papers', 'Gettysburg Address'],
+        answer: 0,
+        fact: 'President Abraham Lincoln issued the Emancipation Proclamation in 1863.'
+      },
+      {
+        category: 'Geometry',
+        grade: '3',
+        prompt: 'What do we call lines that never meet because they are always the same distance apart?',
+        choices: ['Intersecting', 'Parallel', 'Perpendicular', 'Curved'],
+        answer: 1,
+        fact: 'Parallel lines run side by side and never cross.'
+      },
+      {
+        category: 'Patterns',
+        grade: '3',
+        prompt: 'What is the rule? 9, 12, 15, 18',
+        choices: ['Add 2 each time', 'Add 3 each time', 'Multiply by 2', 'Subtract 1 each time'],
+        answer: 1,
+        fact: 'Each step adds 3 to get to the next number.'
+      },
+      {
+        category: 'Music',
+        grade: '3',
+        prompt: 'Which tempo marking means to play fast?',
+        choices: ['Adagio', 'Andante', 'Allegro', 'Piano'],
+        answer: 2,
+        fact: 'Allegro tells musicians to play lively and fast.'
+      },
+      {
+        category: 'Science',
+        grade: '3',
+        prompt: 'What is the solid rock layer beneath soil called?',
+        choices: ['Clay', 'Bedrock', 'Sand', 'Gravel'],
+        answer: 1,
+        fact: 'Bedrock is the hard layer of rock under loose soil and sediment.'
+      },
+      {
+        category: 'Sports (Football)',
+        grade: '3',
+        prompt: 'Kicking the ball through the goalposts after a touchdown for one point is called what?',
+        choices: ['Kickoff', 'Punt', 'Extra point', 'Safety'],
+        answer: 2,
+        fact: 'Teams often try an extra point kick to add one more point after a touchdown.'
+      },
+      {
+        category: 'Geography',
+        grade: '3',
+        prompt: 'A chain of many mountains together is called a what?',
+        choices: ['Island', 'Plateau', 'Mountain range', 'Canyon'],
+        answer: 2,
+        fact: 'A mountain range is a connected line of mountains, like the Rockies.'
+      },
+      {
+        category: 'Science',
+        grade: '3',
+        prompt: 'Which tool measures temperature?',
+        choices: ['Compass', 'Thermometer', 'Microscope', 'Scale'],
+        answer: 1,
+        fact: 'A thermometer shows how hot or cold something is.'
       }
     ]
   }
@@ -581,7 +903,7 @@ function prepareLevel(index) {
   state.levelIndex = index;
   ui.levelSelect.value = String(index);
   state.questionIndex = 0;
-  state.shuffled = shuffle([...levelData[index].questions]);
+  state.shuffled = pickRandomQuestions(levelData[index].questions, QUESTIONS_PER_RUN);
   const runKey = getRunKey();
   state.levelCorrect[runKey] = 0;
   state.levelWrong[runKey] = 0;
@@ -875,6 +1197,11 @@ function shuffle(arr) {
     [arr[i], arr[j]] = [arr[j], arr[i]];
   }
   return arr;
+}
+
+function pickRandomQuestions(pool, desiredCount) {
+  const count = Math.min(desiredCount, pool.length);
+  return shuffle([...pool]).slice(0, count);
 }
 
 function registerServiceWorker() {
