@@ -1,0 +1,19 @@
+{
+  "name": "Dino Trivia Expedition",
+  "short_name": "Dino Trivia",
+  "description": "Collect fossils and climb levels of K-3 trivia adventures.",
+  "start_url": ".",
+  "scope": ".",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#050c18",
+  "theme_color": "#0f172a",
+  "icons": [
+    {
+      "src": "images/dino_trivia_icon.png",
+      "sizes": "1024x1024",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ]
+}
