@@ -194,6 +194,14 @@ const levelData = [
         fact: 'George Washington served from 1789 to 1797.'
       },
       {
+        category: 'U.S. History',
+        grade: '1',
+        prompt: 'Who is the current President of the USA?',
+        choices: ['Barack Obama', 'Donald Trump', 'Boris Johnson', 'Geroge Bush'],
+        answer: 1,
+        fact: 'Donald Trump is the President of the United States of America in 2026.'
+      },
+      {
         category: 'Music',
         grade: '1',
         prompt: 'Clap the beat to this word: "di-no-saur." How many claps do you make?',
@@ -268,10 +276,10 @@ const levelData = [
       {
         category: 'Geography',
         grade: '2',
-        prompt: 'What is a map key also called?',
-        choices: ['Legend', 'Riddle', 'Story', 'Border'],
+        prompt: 'What continent is China on?',
+        choices: ['Asia', 'North America', 'Africa', 'Australia'],
         answer: 0,
-        fact: 'A legend explains the symbols and colors used on a map.'
+        fact: 'China is located in the continent of Asia'
       },
       {
         category: 'Patterns',
@@ -292,10 +300,10 @@ const levelData = [
       {
         category: 'Sports (Football)',
         grade: '2',
-        prompt: 'What safety gear do football players wear on their heads?',
-        choices: ['Crown', 'Helmet', 'Cap', 'Hood'],
+        prompt: 'Who is the quartrback of the Baltimore Ravens?',
+        choices: ['Tom Brady', 'Lamar Jackson', 'Patrick Mahomes', 'Joe Burrow'],
         answer: 1,
-        fact: 'Helmets protect players during tackles and falls.'
+        fact: 'Lamar Jackson is the Ravens quarterback and a two-time NFL Most Valuable Player'
       },
       {
         category: 'Geometry',
@@ -322,20 +330,20 @@ const levelData = [
         fact: 'Omnivores like bears and raccoons can eat plants and other animals.'
       },
       {
-        category: 'Geography',
-        grade: '2',
-        prompt: 'A compass needle points mostly toward which direction?',
-        choices: ['South', 'North', 'East', 'West'],
+        category: 'Science',
+        grade: '1',
+        prompt: 'Earth is how many planets from the Sun?',
+        choices: ['5', '3', '1', '10'],
         answer: 1,
-        fact: 'Compasses align with Earth’s magnetic field, pointing north.'
+        fact: 'Earth is the third farthest planet from the Sun.'
       },
       {
-        category: 'Sports (Basketball)',
+        category: 'Sports (Baseball)',
         grade: '2',
-        prompt: 'From which line do players shoot a free throw?',
-        choices: ['Half-court line', 'Free-throw line', 'Three-point line', 'Sideline'],
+        prompt: 'Who is the shortstop of the Baltimore Orioles?',
+        choices: ['Lamar Jackson', 'Gunnar Henderson', 'Barack Obama', 'Aaron Judge'],
         answer: 1,
-        fact: 'Free throws are taken from the free-throw line after certain fouls.'
+        fact: 'Gunnar Henderson is the Orioles shortstop and best player.'
       }
     ]
   },
@@ -527,7 +535,7 @@ const levelData = [
         category: 'Sports (Lacrosse)',
         grade: '3',
         prompt: 'Which piece of equipment is used to carry and throw the ball in lacrosse?',
-        choices: ['Racket', 'Net stick', 'Stick with a mesh head', 'Paddle'],
+        choices: ['Racket', 'Bat', 'Stick', 'Paddle'],
         answer: 2,
         fact: 'A lacrosse stick has a mesh pocket to cradle, pass, and shoot the ball.'
       },
