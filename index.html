@@ -155,6 +155,18 @@
     </section>
   </main>
 
+  <div class="celebration" id="celebration" aria-hidden="true">
+    <div class="celebration__card" role="dialog" aria-live="polite" aria-labelledby="celebration-title">
+      <div class="celebration__burst"></div>
+      <div class="celebration__confetti" id="celebration-confetti"></div>
+      <p class="label">Level complete</p>
+      <h3 id="celebration-title">Fossil Haul!</h3>
+      <p class="celebration__count"><span id="celebration-count">0</span> fossils earned</p>
+      <p class="muted" id="celebration-detail"></p>
+      <button class="btn" id="celebration-close">Continue Expedition</button>
+    </div>
+  </div>
+
   <div class="ground"></div>
 
   <template id="log-item-template">
