@@ -1,10 +1,12 @@
-const CACHE_NAME = 'dino-trivia-cache-v1';
+const CACHE_NAME = 'dino-trivia-cache-v2';
 const OFFLINE_URL = 'index.html';
 
 const ASSETS = [
   'index.html',
+  'rewards.html',
   'styles.css',
   'script.js',
+  'rewards.js',
   'manifest.webmanifest',
   'images/dino_trivia_icon.png',
   'images/dino-park.svg',
