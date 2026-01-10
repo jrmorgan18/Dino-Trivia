@@ -65,14 +65,6 @@ const levelData = [
         fact: 'Herbivores eat plants, leaves, and fruit.'
       },
       {
-        category: 'Music',
-        grade: '1',
-        prompt: 'Which instrument do you strum with strings?',
-        choices: ['Drum', 'Guitar', 'Flute', 'Triangle'],
-        answer: 1,
-        fact: 'A guitar makes sound when you strum or pluck its strings.'
-      },
-      {
         category: 'U.S. History',
         grade: '1',
         prompt: 'What colors are on the United States flag?',
@@ -147,14 +139,6 @@ const levelData = [
       {
         category: 'U.S. History',
         grade: '1',
-        prompt: 'What is the national bird of the United States?',
-        choices: ['Bald Eagle', 'Cardinal', 'Robin', 'Sparrow'],
-        answer: 0,
-        fact: 'The bald eagle symbolizes strength and freedom.'
-      },
-      {
-        category: 'Science',
-        grade: 'K-1',
         prompt: 'Which animal hatches from an egg?',
         choices: ['Puppy', 'Kitten', 'Chicken', 'Foal'],
         answer: 2,
@@ -243,14 +227,6 @@ const levelData = [
       {
         category: 'Science',
         grade: 'K-1',
-        prompt: 'Which body part helps you breathe?',
-        choices: ['Lungs', 'Ears', 'Knees', 'Toes'],
-        answer: 0,
-        fact: 'Lungs bring air into your body.'
-      },
-      {
-        category: 'Phonics',
-        grade: 'K',
         prompt: 'Which letter makes the /b/ sound in "ball"?',
         choices: ['B', 'D', 'P', 'T'],
         answer: 0,
@@ -571,14 +547,6 @@ const levelData = [
       {
         category: 'Geography',
         grade: '1',
-        prompt: 'Which is a large body of water?',
-        choices: ['Ocean', 'Hill', 'Desert', 'Forest'],
-        answer: 0,
-        fact: 'Oceans are very large bodies of salt water.'
-      },
-      {
-        category: 'Geography',
-        grade: '1',
         prompt: 'A place with lots of trees is called a what?',
         choices: ['Forest', 'River', 'Island', 'City'],
         answer: 0,
@@ -611,26 +579,10 @@ const levelData = [
       {
         category: 'Geography',
         grade: '1',
-        prompt: 'A large piece of land surrounded by water is called what?',
-        choices: ['Island', 'Valley', 'Forest', 'Bridge'],
-        answer: 0,
-        fact: 'Islands are surrounded by water.'
-      },
-      {
-        category: 'Geography',
-        grade: '1',
         prompt: 'What shape is Earth?',
         choices: ['Round like a ball', 'Square', 'Triangle', 'Flat like a table'],
         answer: 0,
         fact: 'Earth is round like a ball.'
-      },
-      {
-        category: 'Geography',
-        grade: '1',
-        prompt: 'A river is a kind of what?',
-        choices: ['Moving water', 'Mountain', 'Building', 'Road'],
-        answer: 0,
-        fact: 'Rivers are moving water that flows across land.'
       },
       {
         category: 'Geography',
@@ -667,22 +619,6 @@ const levelData = [
       {
         category: 'Music',
         grade: '1',
-        prompt: 'Which instrument do you blow to make sound?',
-        choices: ['Trumpet', 'Drum', 'Piano', 'Guitar'],
-        answer: 0,
-        fact: 'Trumpets are played by blowing air.'
-      },
-      {
-        category: 'Music',
-        grade: '1',
-        prompt: 'What do we call the steady beat in music?',
-        choices: ['Rhythm', 'Map', 'Story', 'Color'],
-        answer: 0,
-        fact: 'Rhythm is the steady beat you can clap or tap.'
-      },
-      {
-        category: 'Music',
-        grade: '1',
         prompt: 'Which instrument do you shake to make sound?',
         choices: ['Maraca', 'Violin', 'Piano', 'Flute'],
         answer: 0,
@@ -707,14 +643,6 @@ const levelData = [
       {
         category: 'Music',
         grade: '1',
-        prompt: 'What do you call the tune you hum?',
-        choices: ['Melody', 'Noise', 'Map', 'Paint'],
-        answer: 0,
-        fact: 'A melody is the tune of a song.'
-      },
-      {
-        category: 'U.S. History',
-        grade: '1',
         prompt: 'How many colors are on the U.S. flag?',
         choices: ['3', '2', '4', '5'],
         answer: 0,
@@ -723,42 +651,10 @@ const levelData = [
       {
         category: 'U.S. History',
         grade: '1',
-        prompt: 'Which holiday celebrates America’s independence?',
-        choices: ['July 4th', 'Halloween', 'Valentine’s Day', 'Earth Day'],
-        answer: 0,
-        fact: 'Independence Day is July 4th.'
-      },
-      {
-        category: 'U.S. History',
-        grade: '1',
         prompt: 'The Statue of Liberty stands in which city?',
         choices: ['New York City', 'Los Angeles', 'Chicago', 'Dallas'],
         answer: 0,
         fact: 'The Statue of Liberty is in New York Harbor.'
-      },
-      {
-        category: 'U.S. History',
-        grade: '1',
-        prompt: 'Where does the President live?',
-        choices: ['White House', 'Library', 'School', 'Farm'],
-        answer: 0,
-        fact: 'The President lives in the White House.'
-      },
-      {
-        category: 'U.S. History',
-        grade: '1',
-        prompt: 'What is the capital of the United States?',
-        choices: ['Washington, DC', 'New York City', 'Boston', 'Seattle'],
-        answer: 0,
-        fact: 'Washington, DC is the nation’s capital.'
-      },
-      {
-        category: 'U.S. History',
-        grade: '1',
-        prompt: 'Which bird is a symbol of the United States?',
-        choices: ['Bald Eagle', 'Blue Jay', 'Owl', 'Parrot'],
-        answer: 0,
-        fact: 'The bald eagle is a U.S. symbol.'
       },
       {
         category: 'U.S. History',
@@ -775,14 +671,6 @@ const levelData = [
         choices: ['Liberty Bell', 'School Bell', 'Door Bell', 'Cow Bell'],
         answer: 0,
         fact: 'The Liberty Bell is a symbol of freedom.'
-      },
-      {
-        category: 'U.S. History',
-        grade: '1',
-        prompt: 'What is the name of the song that is the U.S. national anthem?',
-        choices: ['The Star-Spangled Banner', 'Happy Birthday', 'Jingle Bells', 'America the Beautiful'],
-        answer: 0,
-        fact: 'The Star-Spangled Banner is the U.S. national anthem.'
       },
       {
         category: 'U.S. History',
@@ -863,14 +751,6 @@ const levelData = [
         choices: ['Pitch', 'Pass', 'Serve', 'Kick'],
         answer: 0,
         fact: 'The pitcher throws a pitch to the batter.'
-      },
-      {
-        category: 'Sports (Baseball)',
-        grade: '1',
-        prompt: 'How many players are on the field for one team in baseball?',
-        choices: ['9', '5', '7', '11'],
-        answer: 0,
-        fact: 'A baseball team has nine players on the field.'
       }
     ]
   },
@@ -881,22 +761,6 @@ const levelData = [
     difficulty: 'Medium',
     theme: 'forest',
     questions: [
-      {
-        category: 'Geography',
-        grade: '1-2',
-        prompt: 'The United States is part of which continent?',
-        choices: ['Asia', 'Europe', 'North America', 'Africa'],
-        answer: 2,
-        fact: 'The U.S. is located in North America with Canada and Mexico.'
-      },
-      {
-        category: 'U.S. History',
-        grade: '1-2',
-        prompt: 'Who was the first President of the United States?',
-        choices: ['George Washington', 'Abraham Lincoln', 'Benjamin Franklin', 'Harriet Tubman'],
-        answer: 0,
-        fact: 'George Washington served from 1789 to 1797.'
-      },
       {
         category: 'U.S. History',
         grade: '1',
@@ -923,14 +787,6 @@ const levelData = [
       },
       {
         category: 'Science',
-        grade: '2',
-        prompt: 'Water changing into a gas you can’t see is called what?',
-        choices: ['Freezing', 'Melting', 'Evaporation', 'Erosion'],
-        answer: 2,
-        fact: 'Evaporation happens when heat makes water molecules move into the air.'
-      },
-      {
-        category: 'Geometry',
         grade: '2',
         prompt: 'A shape with four equal sides and four right angles is called a what?',
         choices: ['Rectangle', 'Square', 'Triangle', 'Pentagon'],
@@ -1108,14 +964,6 @@ const levelData = [
       {
         category: 'Geography',
         grade: '1-2',
-        prompt: 'Which ocean is the largest?',
-        choices: ['Pacific Ocean', 'Atlantic Ocean', 'Indian Ocean', 'Arctic Ocean'],
-        answer: 0,
-        fact: 'The Pacific Ocean is the largest ocean on Earth.'
-      },
-      {
-        category: 'U.S. History',
-        grade: '1-2',
         prompt: 'Which building is the home of the President?',
         choices: ['White House', 'Capitol', 'Library', 'Museum'],
         answer: 0,
@@ -1152,14 +1000,6 @@ const levelData = [
         choices: ['Delaware', 'Texas', 'California', 'Florida'],
         answer: 0,
         fact: 'Delaware was the first state.'
-      },
-      {
-        category: 'U.S. History',
-        grade: '1-2',
-        prompt: 'What is the capital of the United States?',
-        choices: ['Washington, DC', 'New York City', 'Miami', 'Chicago'],
-        answer: 0,
-        fact: 'Washington, DC is the nation’s capital.'
       },
       {
         category: 'U.S. History',
@@ -1308,14 +1148,6 @@ const levelData = [
       {
         category: 'Science',
         grade: '2',
-        prompt: 'What do we call the change from a liquid to a solid?',
-        choices: ['Freezing', 'Melting', 'Evaporation', 'Boiling'],
-        answer: 0,
-        fact: 'Freezing turns a liquid into a solid.'
-      },
-      {
-        category: 'Science',
-        grade: '2',
         prompt: 'What is a baby butterfly called?',
         choices: ['Caterpillar', 'Tadpole', 'Chick', 'Calf'],
         answer: 0,
@@ -1371,14 +1203,6 @@ const levelData = [
       },
       {
         category: 'Science',
-        grade: '2',
-        prompt: 'What is it called when plants use the sun to make energy?',
-        choices: ['photosynthesis', 'Drinking', 'Eating', 'Sleeping'],
-        answer: 0,
-        fact: 'Photosynthesis is the process where plants turn the sun's light into food and energy.'
-      },
-      {
-        category: 'Geometry',
         grade: '2',
         prompt: 'How many sides does a pentagon have?',
         choices: ['5', '4', '6', '7'],
@@ -1548,14 +1372,6 @@ const levelData = [
       {
         category: 'Patterns',
         grade: '1-2',
-        prompt: 'What comes next? 3, 6, 9, 12, __',
-        choices: ['15', '14', '13', '16'],
-        answer: 0,
-        fact: 'The pattern adds 3 each time.'
-      },
-      {
-        category: 'Patterns',
-        grade: '1-2',
         prompt: 'What comes next? A, B, C, A, B, C, __',
         choices: ['A', 'B', 'D', 'E'],
         answer: 0,
@@ -1620,14 +1436,6 @@ const levelData = [
       {
         category: 'Sports (Football)',
         grade: '2',
-        prompt: 'How many points is a field goal worth?',
-        choices: ['3', '6', '1', '2'],
-        answer: 0,
-        fact: 'Field goals are worth three points.'
-      },
-      {
-        category: 'Sports (Football)',
-        grade: '2',
         prompt: 'What do players wear on their heads for safety?',
         choices: ['Helmet', 'Hat', 'Crown', 'Bandana'],
         answer: 0,
@@ -1640,14 +1448,6 @@ const levelData = [
         choices: ['Quarterback', 'Kicker', 'Center', 'Referee'],
         answer: 0,
         fact: 'The quarterback passes the ball in most plays.'
-      },
-      {
-        category: 'Sports (Football)',
-        grade: '2',
-        prompt: 'How many points is a touchdown worth?',
-        choices: ['6', '3', '1', '2'],
-        answer: 0,
-        fact: 'Touchdowns are worth six points.'
       },
       {
         category: 'Sports (Football)',
@@ -1709,14 +1509,6 @@ const levelData = [
       {
         category: 'Sports (Baseball)',
         grade: '2-3',
-        prompt: 'In baseball, how many strikes make an out?',
-        choices: ['2', '3', '4', '5'],
-        answer: 1,
-        fact: 'Three strikes retire the batter.'
-      },
-      {
-        category: 'Patterns',
-        grade: '2-3',
         prompt: 'What is the missing number in this skip-counting pattern? 5, 10, __, 20, 25',
         choices: ['11', '12', '15', '18'],
         answer: 2,
@@ -1773,14 +1565,6 @@ const levelData = [
       {
         category: 'Geography',
         grade: '3',
-        prompt: 'Lines of latitude run in which direction around Earth?',
-        choices: ['North to south', 'East to west', 'Diagonal', 'Straight up'],
-        answer: 1,
-        fact: 'Latitude lines circle Earth east-west and measure north or south of the equator.'
-      },
-      {
-        category: 'Patterns',
-        grade: '2-3',
         prompt: 'What is the rule? 3, 6, 12, 24',
         choices: ['Add 3 each time', 'Multiply by 2 each time', 'Add 6 then subtract 1', 'Multiply by 3 each time'],
         answer: 1,
@@ -1865,14 +1649,6 @@ const levelData = [
         choices: ['2', '3', '6', '1'],
         answer: 0,
         fact: 'A safety scores two points for the defense.'
-      },
-      {
-        category: 'Sports (Football)',
-        grade: '2-3',
-        prompt: 'What do you call a kick after a touchdown worth one point?',
-        choices: ['Extra point', 'Field goal', 'Kickoff', 'Punt'],
-        answer: 0,
-        fact: 'An extra point kick can add one point.'
       },
       {
         category: 'Sports (Football)',
@@ -2289,14 +2065,6 @@ const levelData = [
         choices: ['Condensation', 'Evaporation', 'Runoff', 'Collection'],
         answer: 0,
         fact: 'Condensation turns water vapor into tiny droplets.'
-      },
-      {
-        category: 'Science',
-        grade: '3',
-        prompt: 'What is the force that makes objects fall to Earth?',
-        choices: ['Gravity', 'Magnetism', 'Friction', 'Electricity'],
-        answer: 0,
-        fact: 'Gravity pulls objects toward Earth.'
       },
       {
         category: 'Science',
@@ -3366,7 +3134,7 @@ function prepareCategory(category) {
   ui.categorySelect.value = category;
   state.questionIndex = 0;
   const pool = levelData.flatMap(level => level.questions.filter(q => q.category === category));
-  state.shuffled = shuffle([...pool]);
+  state.shuffled = shuffle([...pool]).map(shuffleQuestionChoices);
   const runKey = getRunKey();
   state.levelCorrect[runKey] = 0;
   state.levelWrong[runKey] = 0;
@@ -3753,7 +3521,18 @@ function shuffle(arr) {
 
 function pickRandomQuestions(pool, desiredCount) {
   const count = Math.min(desiredCount, pool.length);
-  return shuffle([...pool]).slice(0, count);
+  return shuffle([...pool]).slice(0, count).map(shuffleQuestionChoices);
+}
+
+function shuffleQuestionChoices(question) {
+  const entries = question.choices.map((choice, index) => ({ choice, index }));
+  const shuffled = shuffle(entries);
+  const answer = shuffled.findIndex((entry) => entry.index === question.answer);
+  return {
+    ...question,
+    choices: shuffled.map((entry) => entry.choice),
+    answer
+  };
 }
 
 function registerServiceWorker() {
