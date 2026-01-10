@@ -699,26 +699,10 @@ const levelData = [
       {
         category: 'Music',
         grade: '1',
-        prompt: 'Which instrument uses strings you pluck?',
-        choices: ['Harp', 'Drum', 'Trumpet', 'Flute'],
-        answer: 0,
-        fact: 'Harp strings are plucked to make sound.'
-      },
-      {
-        category: 'Music',
-        grade: '1',
-        prompt: 'Which is a loud sound?',
-        choices: ['Crash', 'Whisper', 'Murmur', 'Hush'],
-        answer: 0,
-        fact: 'A crash is a loud sound.'
-      },
-      {
-        category: 'Music',
-        grade: '1',
-        prompt: 'Which instrument is shaped like a triangle?',
-        choices: ['Triangle', 'Drum', 'Piano', 'Flute'],
-        answer: 0,
-        fact: 'A triangle is a small metal instrument you strike.'
+        prompt: 'What are the strings on a guitar in order from top to bottom?',
+        choices: ['EADEGB', 'GADEFA', 'EADGBE', 'GBADEA'],
+        answer: 2,
+        fact: 'EADGBE - Every Angry Dinosaur Growls Before Eating.'
       },
       {
         category: 'Music',
@@ -1036,7 +1020,7 @@ const levelData = [
       {
         category: 'U.S. History',
         grade: '2',
-        prompt: 'Which document announced the American colonies were free from Britain?',
+        prompt: 'Which document announced the American colonies were free from Great Britain?',
         choices: ['Bill of Rights', 'Declaration of Independence', 'U.S. Constitution', 'Mayflower Compact'],
         answer: 1,
         fact: 'The Declaration of Independence was adopted on July 4, 1776.'
@@ -1074,20 +1058,20 @@ const levelData = [
         fact: 'The Pacific Ocean borders the U.S. west coast.'
       },
       {
-        category: 'Geography',
+        category: 'Science',
         grade: '1-2',
-        prompt: 'A map key tells you what?',
-        choices: ['What the symbols mean', 'How to sing', 'How to bake', 'What time it is'],
+        prompt: 'Which is the largest planet?',
+        choices: ['Jupiter', 'Mars', 'Saturn', 'Uranus'],
         answer: 0,
-        fact: 'A map key or legend explains map symbols.'
+        fact: 'Jupiter is the largest planet in the solar system.'
       },
       {
-        category: 'Geography',
+        category: 'Science',
         grade: '1-2',
-        prompt: 'Which direction is to the right on a compass?',
-        choices: ['East', 'West', 'North', 'South'],
+        prompt: 'Which galaxy is our solary system in?',
+        choices: ['Milky Way', 'America', 'Andromeda', 'Antartica'],
         answer: 0,
-        fact: 'East is to the right when facing north.'
+        fact: 'The solar system including the sun and all its planets are in the Milky Way galaxy.'
       },
       {
         category: 'Geography',
@@ -1096,14 +1080,6 @@ const levelData = [
         choices: ['Ocean', 'Lake', 'Pond', 'Stream'],
         answer: 0,
         fact: 'Oceans are the largest bodies of salt water.'
-      },
-      {
-        category: 'Geography',
-        grade: '1-2',
-        prompt: 'Which landform is a low area between hills or mountains?',
-        choices: ['Valley', 'Mountain', 'Plateau', 'Desert'],
-        answer: 0,
-        fact: 'Valleys are low places between higher land.'
       },
       {
         category: 'Geography',
@@ -1138,22 +1114,6 @@ const levelData = [
         fact: 'The Pacific Ocean is the largest ocean on Earth.'
       },
       {
-        category: 'Geography',
-        grade: '1-2',
-        prompt: 'What is a flat, high landform called?',
-        choices: ['Plateau', 'Valley', 'Canyon', 'Delta'],
-        answer: 0,
-        fact: 'Plateaus are high, flat areas of land.'
-      },
-      {
-        category: 'U.S. History',
-        grade: '1-2',
-        prompt: 'What do we celebrate on Presidents’ Day?',
-        choices: ['U.S. presidents', 'Winter', 'The ocean', 'Dinosaurs'],
-        answer: 0,
-        fact: 'Presidents’ Day honors U.S. presidents.'
-      },
-      {
         category: 'U.S. History',
         grade: '1-2',
         prompt: 'Which building is the home of the President?',
@@ -1164,10 +1124,10 @@ const levelData = [
       {
         category: 'U.S. History',
         grade: '1-2',
-        prompt: 'What does the Statue of Liberty hold?',
-        choices: ['A torch', 'A flag', 'A drum', 'A basketball'],
+        prompt: 'Which country did the US win its independence from?',
+        choices: ['Great Britain', 'France', 'Canada', 'China'],
         answer: 0,
-        fact: 'The Statue of Liberty holds a torch.'
+        fact: 'The United States won its independence from Great Britain in the Revolutionary War.'
       },
       {
         category: 'U.S. History',
@@ -1236,14 +1196,6 @@ const levelData = [
       {
         category: 'Music',
         grade: '1-2',
-        prompt: 'Which tempo marking means to play slowly?',
-        choices: ['Adagio', 'Allegro', 'Presto', 'Vivace'],
-        answer: 0,
-        fact: 'Adagio means slow.'
-      },
-      {
-        category: 'Music',
-        grade: '1-2',
         prompt: 'Which instrument has six strings and is strummed?',
         choices: ['Guitar', 'Flute', 'Drum', 'Trumpet'],
         answer: 0,
@@ -1276,30 +1228,6 @@ const levelData = [
       {
         category: 'Music',
         grade: '1-2',
-        prompt: 'Which instrument uses a bow to play?',
-        choices: ['Violin', 'Drum', 'Piano', 'Trumpet'],
-        answer: 0,
-        fact: 'A violin is played with a bow.'
-      },
-      {
-        category: 'Music',
-        grade: '1-2',
-        prompt: 'Which word means to play quietly?',
-        choices: ['Piano', 'Forte', 'Loud', 'Fast'],
-        answer: 0,
-        fact: 'Piano means soft or quiet.'
-      },
-      {
-        category: 'Music',
-        grade: '1-2',
-        prompt: 'Which instrument is small and has a high sound?',
-        choices: ['Piccolo', 'Tuba', 'Drum', 'Cello'],
-        answer: 0,
-        fact: 'The piccolo is a small, high-sounding flute.'
-      },
-      {
-        category: 'Music',
-        grade: '1-2',
         prompt: 'What do musicians read to know what to play?',
         choices: ['Music notes', 'Maps', 'Recipes', 'Calendars'],
         answer: 0,
@@ -1328,14 +1256,6 @@ const levelData = [
         choices: ['Traveling', 'Serving', 'Pitching', 'Offside'],
         answer: 0,
         fact: 'Traveling is moving without dribbling.'
-      },
-      {
-        category: 'Sports (Basketball)',
-        grade: '2',
-        prompt: 'How many points is a shot from beyond the arc worth?',
-        choices: ['3', '1', '2', '4'],
-        answer: 0,
-        fact: 'Three-point shots are worth three points.'
       },
       {
         category: 'Sports (Basketball)',
@@ -1376,14 +1296,6 @@ const levelData = [
         choices: ['Basket', 'Touchdown', 'Goal kick', 'Strike'],
         answer: 0,
         fact: 'Scoring in basketball is often called making a basket.'
-      },
-      {
-        category: 'Sports (Basketball)',
-        grade: '2',
-        prompt: 'Which hand skill helps you control the ball while dribbling?',
-        choices: ['Hand-eye coordination', 'Swimming', 'Kicking', 'Balancing a bat'],
-        answer: 0,
-        fact: 'Hand-eye coordination helps control the ball.'
       },
       {
         category: 'Science',
@@ -1460,10 +1372,10 @@ const levelData = [
       {
         category: 'Science',
         grade: '2',
-        prompt: 'What is it called when plants bend toward light?',
-        choices: ['Phototropism', 'Erosion', 'Weathering', 'Hibernation'],
+        prompt: 'What is it called when plants use the sun to make energy?',
+        choices: ['photosynthesis', 'Drinking', 'Eating', 'Sleeping'],
         answer: 0,
-        fact: 'Phototropism means growing toward light.'
+        fact: 'Photosynthesis is the process where plants turn the sun's light into food and energy.'
       },
       {
         category: 'Geometry',
@@ -1732,14 +1644,6 @@ const levelData = [
       {
         category: 'Sports (Football)',
         grade: '2',
-        prompt: 'What do you call it when a player catches a kick and runs it back?',
-        choices: ['Return', 'Serve', 'Dribble', 'Walk'],
-        answer: 0,
-        fact: 'A return happens after a kickoff or punt.'
-      },
-      {
-        category: 'Sports (Football)',
-        grade: '2',
         prompt: 'How many points is a touchdown worth?',
         choices: ['6', '3', '1', '2'],
         answer: 0,
@@ -1752,22 +1656,6 @@ const levelData = [
         choices: ['End zone', 'Dugout', 'Baseline', 'Paint'],
         answer: 0,
         fact: 'Teams score by getting the ball into the end zone.'
-      },
-      {
-        category: 'Sports (Football)',
-        grade: '2',
-        prompt: 'What do you call passing the ball backward to a teammate?',
-        choices: ['Handoff', 'Serve', 'Strike', 'Home run'],
-        answer: 0,
-        fact: 'A handoff gives the ball to a runner.'
-      },
-      {
-        category: 'Sports (Football)',
-        grade: '2',
-        prompt: 'What do you call it when the ball carrier is tackled behind the line?',
-        choices: ['Loss of yards', 'Goal kick', 'Foul shot', 'Double play'],
-        answer: 0,
-        fact: 'A tackle behind the line causes a loss of yards.'
       },
       {
         category: 'Sports (Football)',
@@ -2009,14 +1897,6 @@ const levelData = [
         choices: ['3', '1', '2', '6'],
         answer: 0,
         fact: 'Field goals are worth three points.'
-      },
-      {
-        category: 'Sports (Football)',
-        grade: '2-3',
-        prompt: 'What do you call a kick that restarts play after a score?',
-        choices: ['Kickoff', 'Punt', 'Snap', 'Touchback'],
-        answer: 0,
-        fact: 'A kickoff starts play after a score.'
       },
       {
         category: 'Sports (Football)',
@@ -2517,42 +2397,10 @@ const levelData = [
       {
         category: 'Music',
         grade: '2-3',
-        prompt: 'What does a crescendo tell musicians to do?',
-        choices: ['Get louder', 'Get softer', 'Play faster', 'Play slower'],
-        answer: 0,
-        fact: 'A crescendo means gradually louder.'
-      },
-      {
-        category: 'Music',
-        grade: '2-3',
         prompt: 'Which instrument is in the brass family?',
         choices: ['Trumpet', 'Flute', 'Violin', 'Clarinet'],
         answer: 0,
         fact: 'The trumpet is a brass instrument.'
-      },
-      {
-        category: 'Music',
-        grade: '2-3',
-        prompt: 'What is the name of the staff with five lines where notes are written?',
-        choices: ['Staff', 'Scale', 'Chord', 'Measure'],
-        answer: 0,
-        fact: 'Notes are written on a five-line staff.'
-      },
-      {
-        category: 'Music',
-        grade: '2-3',
-        prompt: 'Which word means to play very fast?',
-        choices: ['Presto', 'Largo', 'Adagio', 'Piano'],
-        answer: 0,
-        fact: 'Presto is a very fast tempo.'
-      },
-      {
-        category: 'Music',
-        grade: '2-3',
-        prompt: 'Which instrument has 88 keys?',
-        choices: ['Piano', 'Flute', 'Drum', 'Guitar'],
-        answer: 0,
-        fact: 'A standard piano has 88 keys.'
       },
       {
         category: 'Music',
@@ -2565,34 +2413,10 @@ const levelData = [
       {
         category: 'Music',
         grade: '2-3',
-        prompt: 'Which word means to play smoothly without breaks?',
-        choices: ['Legato', 'Staccato', 'Forte', 'Largo'],
-        answer: 0,
-        fact: 'Legato means smooth and connected.'
-      },
-      {
-        category: 'Music',
-        grade: '2-3',
-        prompt: 'Which instrument is part of the woodwind family?',
-        choices: ['Clarinet', 'Tuba', 'Drum', 'Trombone'],
-        answer: 0,
-        fact: 'The clarinet is a woodwind instrument.'
-      },
-      {
-        category: 'Music',
-        grade: '2-3',
         prompt: 'How many beats does a whole note get in 4/4 time?',
         choices: ['4', '2', '1', '3'],
         answer: 0,
         fact: 'A whole note lasts four beats in 4/4 time.'
-      },
-      {
-        category: 'Music',
-        grade: '2-3',
-        prompt: 'What is a rest used for in music?',
-        choices: ['Silence', 'Loud playing', 'Faster tempo', 'Extra notes'],
-        answer: 0,
-        fact: 'A rest shows when to be silent.'
       },
       {
         category: 'Sports (Basketball)',
@@ -2629,42 +2453,10 @@ const levelData = [
       {
         category: 'Sports (Basketball)',
         grade: '3',
-        prompt: 'What do we call blocking a shot without fouling?',
-        choices: ['Block', 'Steal', 'Charge', 'Travel'],
-        answer: 0,
-        fact: 'A block stops a shot attempt.'
-      },
-      {
-        category: 'Sports (Basketball)',
-        grade: '3',
-        prompt: 'What do you call moving the ball down the court quickly?',
-        choices: ['Fast break', 'Huddle', 'Offside', 'Bunt'],
-        answer: 0,
-        fact: 'A fast break is a quick offensive attack.'
-      },
-      {
-        category: 'Sports (Basketball)',
-        grade: '3',
         prompt: 'How many quarters are in a typical basketball game?',
         choices: ['4', '2', '3', '5'],
         answer: 0,
         fact: 'Games are divided into four quarters.'
-      },
-      {
-        category: 'Sports (Basketball)',
-        grade: '3',
-        prompt: 'What is it called when a player stands still and gets fouled by a moving player?',
-        choices: ['Charge', 'Block', 'Travel', 'Kick'],
-        answer: 0,
-        fact: 'A charge is an offensive foul.'
-      },
-      {
-        category: 'Sports (Basketball)',
-        grade: '3',
-        prompt: 'Which position is often the tallest player near the basket?',
-        choices: ['Center', 'Guard', 'Forward', 'Coach'],
-        answer: 0,
-        fact: 'Centers often play close to the basket.'
       },
       {
         category: 'Sports (Basketball)',
@@ -2894,14 +2686,6 @@ const levelData = [
       {
         category: 'Geography',
         grade: '3',
-        prompt: 'What is a map scale used for?',
-        choices: ['Showing distance', 'Showing weather', 'Showing time', 'Showing sound'],
-        answer: 0,
-        fact: 'A map scale helps measure real distances.'
-      },
-      {
-        category: 'Geography',
-        grade: '3',
         prompt: 'Which is a natural resource?',
         choices: ['Water', 'Plastic', 'Glass', 'Paper'],
         answer: 0,
@@ -2930,14 +2714,6 @@ const levelData = [
         choices: ['Score by shooting into the net', 'Knock down pins', 'Hit a home run', 'Kick a field goal'],
         answer: 0,
         fact: 'Teams score by shooting the ball into the goal.'
-      },
-      {
-        category: 'Sports (Lacrosse)',
-        grade: '3',
-        prompt: 'What do players use to catch and throw the ball?',
-        choices: ['Stick with a net', 'Bat', 'Racket', 'Glove only'],
-        answer: 0,
-        fact: 'Lacrosse sticks have a pocket to cradle the ball.'
       },
       {
         category: 'Sports (Lacrosse)',
@@ -2974,30 +2750,6 @@ const levelData = [
       {
         category: 'Sports (Lacrosse)',
         grade: '3',
-        prompt: 'What do we call a pass in lacrosse?',
-        choices: ['Pass', 'Pitch', 'Serve', 'Kick'],
-        answer: 0,
-        fact: 'Players pass the ball to teammates using the stick.'
-      },
-      {
-        category: 'Sports (Lacrosse)',
-        grade: '3',
-        prompt: 'What is a legal body check used for?',
-        choices: ['To gain possession', 'To score points', 'To stop the clock', 'To end the game'],
-        answer: 0,
-        fact: 'Body checks are used to try to gain possession.'
-      },
-      {
-        category: 'Sports (Lacrosse)',
-        grade: '3',
-        prompt: 'What is a shot that bounces before reaching the goal called?',
-        choices: ['Bounce shot', 'Field goal', 'Lob', 'Free throw'],
-        answer: 0,
-        fact: 'A bounce shot can be harder for goalies to stop.'
-      },
-      {
-        category: 'Sports (Lacrosse)',
-        grade: '3',
         prompt: 'What do defenders try to do?',
         choices: ['Stop the other team from scoring', 'Serve the ball', 'Hit a home run', 'Guard the bases'],
         answer: 0,
@@ -3006,82 +2758,10 @@ const levelData = [
       {
         category: 'Music',
         grade: '3',
-        prompt: 'Which tempo marking means very fast?',
-        choices: ['Presto', 'Largo', 'Adagio', 'Andante'],
-        answer: 0,
-        fact: 'Presto means very fast.'
-      },
-      {
-        category: 'Music',
-        grade: '3',
-        prompt: 'What does the symbol 𝄞 represent in music?',
-        choices: ['Treble clef', 'Bass clef', 'Rest', 'Sharp'],
-        answer: 0,
-        fact: 'The treble clef marks higher notes.'
-      },
-      {
-        category: 'Music',
-        grade: '3',
-        prompt: 'Which instrument family uses vibrating strings?',
-        choices: ['String family', 'Brass family', 'Woodwind family', 'Percussion family'],
-        answer: 0,
-        fact: 'Violins and cellos are string instruments.'
-      },
-      {
-        category: 'Music',
-        grade: '3',
-        prompt: 'What does a decrescendo tell musicians to do?',
-        choices: ['Get softer', 'Get louder', 'Play faster', 'Play slower'],
-        answer: 0,
-        fact: 'A decrescendo means gradually softer.'
-      },
-      {
-        category: 'Music',
-        grade: '3',
         prompt: 'Which note value is worth one beat in 4/4 time?',
         choices: ['Quarter note', 'Half note', 'Whole note', 'Eighth note'],
         answer: 0,
         fact: 'A quarter note lasts one beat.'
-      },
-      {
-        category: 'Music',
-        grade: '3',
-        prompt: 'Which instrument is in the woodwind family?',
-        choices: ['Flute', 'Tuba', 'Drum', 'Trombone'],
-        answer: 0,
-        fact: 'Flutes are woodwind instruments.'
-      },
-      {
-        category: 'Music',
-        grade: '3',
-        prompt: 'What do we call a group of three notes played together?',
-        choices: ['Chord', 'Beat', 'Rest', 'Measure'],
-        answer: 0,
-        fact: 'A chord is made of notes played at the same time.'
-      },
-      {
-        category: 'Music',
-        grade: '3',
-        prompt: 'Which word means to play short and detached?',
-        choices: ['Staccato', 'Legato', 'Forte', 'Piano'],
-        answer: 0,
-        fact: 'Staccato notes are short and separated.'
-      },
-      {
-        category: 'Music',
-        grade: '3',
-        prompt: 'What do we call the speed of music?',
-        choices: ['Tempo', 'Pitch', 'Harmony', 'Scale'],
-        answer: 0,
-        fact: 'Tempo is the speed of the music.'
-      },
-      {
-        category: 'Music',
-        grade: '3',
-        prompt: 'Which instrument is in the percussion family?',
-        choices: ['Timpani', 'Violin', 'Flute', 'Trumpet'],
-        answer: 0,
-        fact: 'Timpani drums are percussion instruments.'
       },
       {
         category: 'Science',
@@ -3118,14 +2798,6 @@ const levelData = [
       {
         category: 'Science',
         grade: '3',
-        prompt: 'What do we call the change from liquid to gas?',
-        choices: ['Evaporation', 'Condensation', 'Freezing', 'Melting'],
-        answer: 0,
-        fact: 'Evaporation turns water into vapor.'
-      },
-      {
-        category: 'Science',
-        grade: '3',
         prompt: 'What do you call animals that are active at night?',
         choices: ['Nocturnal', 'Diurnal', 'Aquatic', 'Arctic'],
         answer: 0,
@@ -3154,14 +2826,6 @@ const levelData = [
         choices: ['Heart', 'Lungs', 'Stomach', 'Skin'],
         answer: 0,
         fact: 'The heart pumps blood through the body.'
-      },
-      {
-        category: 'Science',
-        grade: '3',
-        prompt: 'What is the process of plants making food called?',
-        choices: ['Photosynthesis', 'Respiration', 'Digestion', 'Fermentation'],
-        answer: 0,
-        fact: 'Photosynthesis uses sunlight to make sugar.'
       },
       {
         category: 'Sports (Basketball)',
