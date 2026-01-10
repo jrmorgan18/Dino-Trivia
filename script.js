@@ -3082,7 +3082,12 @@ const ui = {
     stegosaurus: document.getElementById('fossil-count-stegosaurus'),
     trex: document.getElementById('fossil-count-trex'),
     indominus: document.getElementById('fossil-count-indominus')
-  }
+  },
+  celebration: document.getElementById('celebration'),
+  celebrationCount: document.getElementById('celebration-count'),
+  celebrationDetail: document.getElementById('celebration-detail'),
+  celebrationClose: document.getElementById('celebration-close'),
+  celebrationConfetti: document.getElementById('celebration-confetti')
 };
 
 function getRunKey() {
@@ -3168,6 +3173,12 @@ function bindEvents() {
   });
   ui.summaryBtn.addEventListener('click', () => showSummary());
   ui.resetCumulative.addEventListener('click', resetCumulative);
+  ui.celebrationClose.addEventListener('click', hideCelebration);
+  ui.celebration.addEventListener('click', (event) => {
+    if (event.target === ui.celebration) {
+      hideCelebration();
+    }
+  });
   ui.levelSelect.addEventListener('change', () => {
     state.mode = 'level';
     state.activeCategory = 'all';
@@ -3340,6 +3351,8 @@ function finishLevel() {
   const wrongCount = state.levelWrong[runKey] || 0;
   const total = state.shuffled.length || 1;
   const canAdvanceLevel = wrongCount <= 3;
+  const dinoKey = getDinoKeyForLevelIndex(state.levelIndex);
+  const fossilsEarned = state.mode === 'level' && dinoKey ? correctCount : 0;
   if (state.mode === 'level') {
     state.canAdvance = canAdvanceLevel;
   }
@@ -3359,6 +3372,16 @@ function finishLevel() {
     : '';
   ui.feedback.textContent = `Level complete! ${correctCount} right, ${wrongCount} missed out of ${total}.${advanceNote}`;
   updateProgress(state.shuffled.length);
+
+  if (state.mode === 'level') {
+    const detail = dinoKey
+      ? `Added to your ${formatDinoName(dinoKey)} bucket.`
+      : 'Fossil buckets unlock starting Level 2.';
+    showCelebration({
+      fossilsEarned,
+      detail: `${meta.name} complete. ${detail}`.trim()
+    });
+  }
 
   if (state.mode === 'level' && state.levelIndex === levelData.length - 1 && !state.sessionComplete) {
     completeSession();
@@ -3497,6 +3520,48 @@ function renderFossilBuckets() {
     }
     countLabel.textContent = `${count} ${count === 1 ? 'fossil' : 'fossils'}`;
   });
+}
+
+function showCelebration({ fossilsEarned, detail }) {
+  if (!ui.celebration) return;
+  ui.celebrationCount.textContent = fossilsEarned;
+  ui.celebrationDetail.textContent = detail;
+  renderConfetti();
+  resetBurstAnimation();
+  ui.celebration.classList.add('is-visible');
+  ui.celebration.setAttribute('aria-hidden', 'false');
+}
+
+function hideCelebration() {
+  if (!ui.celebration) return;
+  ui.celebration.classList.remove('is-visible');
+  ui.celebration.setAttribute('aria-hidden', 'true');
+}
+
+function resetBurstAnimation() {
+  const burst = ui.celebration.querySelector('.celebration__burst');
+  if (!burst) return;
+  burst.style.animation = 'none';
+  void burst.offsetHeight;
+  burst.style.animation = '';
+}
+
+function renderConfetti() {
+  if (!ui.celebrationConfetti) return;
+  ui.celebrationConfetti.innerHTML = '';
+  const emojis = ['🦴', '✨', '🪨', '🌟'];
+  const pieceCount = 18;
+  for (let i = 0; i < pieceCount; i += 1) {
+    const piece = document.createElement('span');
+    piece.className = 'celebration__piece';
+    piece.dataset.emoji = emojis[i % emojis.length];
+    piece.style.setProperty('--x', `${10 + Math.random() * 80}%`);
+    piece.style.setProperty('--size', `${14 + Math.random() * 14}px`);
+    piece.style.setProperty('--rotation', `${90 + Math.random() * 240}deg`);
+    piece.style.setProperty('--delay', `${Math.random() * 0.3}s`);
+    piece.style.setProperty('--duration', `${0.9 + Math.random() * 0.6}s`);
+    ui.celebrationConfetti.appendChild(piece);
+  }
 }
 
 function addLogEntry({ label, detail, text }) {
