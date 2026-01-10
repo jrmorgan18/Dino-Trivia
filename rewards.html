@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dino Trivia Expedition | Fossil Rewards</title>
+  <meta name="theme-color" content="#0f172a">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="images/dino_trivia_icon.png" sizes="1024x1024" type="image/png">
+  <link rel="apple-touch-icon" href="images/dino_trivia_icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;700&family=Fredoka:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="sky"></div>
+  <div class="dino-parade">
+    <div class="dino dino-one"></div>
+    <div class="dino dino-two"></div>
+    <div class="dino dino-three"></div>
+    <div class="pterodactyl"></div>
+  </div>
+  <nav class="top-nav" aria-label="Primary">
+    <a class="btn btn--ghost" href="index.html">Expedition</a>
+    <a class="btn btn--ghost" href="rewards.html" aria-current="page">Fossil Rewards</a>
+  </nav>
+
+  <header class="hero hero--compact">
+    <div class="hero__text">
+      <p class="hero__eyebrow">TRACK YOUR TREASURE</p>
+      <h1>Fossil Rewards Depot</h1>
+      <p class="hero__lead">See how many fossils you have per level and how they stack up into Fossil Points.</p>
+      <p class="muted">Fossil Points = fossils earned at a level × that level number.</p>
+    </div>
+    <div class="hero__score">
+      <div class="score-card">
+        <p class="label">Total Fossil Points</p>
+        <p class="value" id="total-points">0</p>
+        <p class="hint" id="total-fossils">Total fossils: 0</p>
+      </div>
+    </div>
+  </header>
+
+  <main class="layout layout--single">
+    <section class="panel">
+      <div class="panel__header">
+        <div>
+          <p class="label">Fossil Points by Level</p>
+          <h2>Level Breakdown</h2>
+          <p class="muted">Keep collecting fossils to climb the reward ladder.</p>
+        </div>
+      </div>
+      <div class="points-grid" id="points-grid" aria-live="polite"></div>
+    </section>
+
+    <section class="panel">
+      <div class="panel__header">
+        <div>
+          <p class="label">Rewards Guide</p>
+          <h2>Prize Checklist</h2>
+          <p class="muted">Prizes unlock when your total Fossil Points reach each milestone.</p>
+        </div>
+      </div>
+      <ul class="prize-list" id="prize-list"></ul>
+    </section>
+  </main>
+
+  <div class="ground"></div>
+
+  <script src="rewards.js"></script>
+</body>
+</html>
